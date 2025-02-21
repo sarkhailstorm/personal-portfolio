@@ -13,10 +13,8 @@ const TopNavbar = () => {
       <div className="flex gap-4">
         <div className="flex gap-4">
           <a>
-            href="/"
-            title="Discord"
-            className="bg-[#5865F2] rounded-full w-9 h-9 flex justify-center items-center"
-          >
+            href="/" title="Discord" className="bg-[#5865F2] rounded-full w-9
+            h-9 flex justify-center items-center"
             <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125 " />
           </a>
           <a
