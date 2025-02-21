@@ -6,7 +6,7 @@ import { FaSignalMessenger } from "react-icons/fa6";
 
 const TopNavbar = () => {
   return (
-    <nav className="fixed left-0 p-4 flex items-center justify-between w-full px-12 py-8">
+    <nav className="fixed left-0 p-4 flex items-center justify-between w-full px-24 py-8">
       <div className="flex justify-center items-center">
         <img src="./letter-s.png" alt="" className="w-10 h-10" />
       </div>
@@ -37,7 +37,7 @@ const TopNavbar = () => {
             <FaSignalMessenger className="text-xl ease-in-out duration-300 hover:scale-125" />
           </Link>
         </div>
-        <div className="bg-[#800020] rounded-xl px-4 py-2">
+        <div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-green-800 hover:scale-110 ease-in-out duration-300 cursor-pointer">
           <Link href="/contact">Hire Me</Link>
         </div>
       </div>
