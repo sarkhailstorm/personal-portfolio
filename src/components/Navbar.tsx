@@ -8,21 +8,21 @@ import { FaEnvelope } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
-    <nav className="text-3xl">
+    <nav className="fixed right-5 top-1/2 transform -translate-y-1/2 text-3xl flex flex-col gap-6 bg-gray-900 p-4 rounded-lg shadow-lg">
       <Link href="/">
-        <IoHome />
+        <IoHome className="hover:text-cyan-500 ease-in-out duration-300 "/>
       </Link>
       <Link href="/services">
-        <IoPerson />
+        <IoPerson className="hover:text-cyan-500 ease-in-out duration-300 "/>
       </Link>
       <Link href="/skills">
-        <FaTools />
+        <FaTools className="hover:text-cyan-500 ease-in-out duration-300 "/>
       </Link>
       <Link href="/projects">
-        <FaFolderOpen />
+        <FaFolderOpen className="hover:text-cyan-500 ease-in-out duration-300 "/>
       </Link>
       <Link href="/contact">
-        <FaEnvelope />
+        <FaEnvelope className="hover:text-cyan-500 ease-in-out duration-300 "/>
       </Link>
     </nav>
   );
