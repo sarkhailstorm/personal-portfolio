@@ -8,21 +8,52 @@ import { FaEnvelope } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
-    <nav className="fixed right-5 top-1/2 transform -translate-y-1/2 text-3xl flex flex-col gap-6 bg-gray-900 p-4 rounded-lg shadow-lg">
-      <Link href="/">
-        <IoHome className="hover:text-cyan-500 ease-in-out duration-300 "/>
+    <nav className="fixed right-0 flex flex-col gap-4 justify-center items-end h-screen p-4">
+      <Link
+        href="/"
+        className="group relative flex items-center hover:gap-3 bg-[#800020] p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5"
+      >
+        <span className="overflow-hidden opacity-0 w-0 group-hover:w-14 group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-lg">
+          Home
+        </span>
+        <IoHome className="text-white text-3xl transition-transform duration-300" />
       </Link>
-      <Link href="/services">
-        <IoPerson className="hover:text-cyan-500 ease-in-out duration-300 "/>
+
+      <Link
+        href="/services"
+        className="group relative flex items-center hover:gap-3 bg-[#800020] p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5"
+      >
+        <span className="overflow-hidden opacity-0 w-0 group-hover:w-20 group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-lg">
+          Services
+        </span>
+        <IoPerson  className="text-white text-3xl transition-transform duration-300"  />
       </Link>
-      <Link href="/skills">
-        <FaTools className="hover:text-cyan-500 ease-in-out duration-300 "/>
+      <Link
+        href="/skills"
+        className="group relative flex items-center hover:gap-3 bg-[#800020] p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5"
+      >
+        <span className="overflow-hidden opacity-0 w-0 group-hover:w-14 group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-lg">
+          Skills
+        </span>
+        <FaTools  className="text-white text-3xl transition-transform duration-300"  />
       </Link>
-      <Link href="/projects">
-        <FaFolderOpen className="hover:text-cyan-500 ease-in-out duration-300 "/>
+      <Link
+        href="/projects"
+        className="group relative flex items-center hover:gap-3 bg-[#800020] p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5"
+      >
+        <span className="overflow-hidden opacity-0 w-0 group-hover:w-20 group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-lg">
+          Projects
+        </span>
+        <FaFolderOpen  className="text-white text-3xl transition-transform duration-300"  />
       </Link>
-      <Link href="/contact">
-        <FaEnvelope className="hover:text-cyan-500 ease-in-out duration-300 "/>
+      <Link
+        href="/contact"
+        className="group relative flex items-center hover:gap-3 bg-[#800020] p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5"
+      >
+        <span className="overflow-hidden opacity-0 w-0 group-hover:w-20 group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-lg">
+          Contact
+        </span>
+        <FaEnvelope  className="text-white text-3xl transition-transform duration-300"  />
       </Link>
     </nav>
   );

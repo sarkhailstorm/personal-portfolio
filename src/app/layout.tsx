@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-black text-white h-screen`}>
+      <body className={`${font.className} bg-black text-white`}>
         <Navbar />
         {children}
       </body>
