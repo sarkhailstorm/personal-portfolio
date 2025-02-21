@@ -4,12 +4,6 @@ import { FaDiscord } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaSignalMessenger } from "react-icons/fa6";
 
-const navLinks = [
-  { href: "/", icon: <FaDiscord className="text-2xl" /> },
-  { href: "/", icon: <FaGithub className="text-2xl" /> },
-  { href: "/", icon: <FaSignalMessenger className="text-2xl" /> },
-];
-
 const TopNavbar = () => {
   return (
     <nav className="fixed left-0 p-4 flex items-center justify-between w-full px-12 py-8">
@@ -18,13 +12,13 @@ const TopNavbar = () => {
       </div>
       <div className="flex gap-4">
         <div className="flex gap-4">
-          <Link
+          <a>
             href="/"
             title="Discord"
             className="bg-[#5865F2] rounded-full w-9 h-9 flex justify-center items-center"
           >
             <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125 " />
-          </Link>
+          </a>
           <a
             href="https://github.com/sarkhailstorm"
             target="_blank"
