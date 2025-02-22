@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className="h-screen flex items-center justify-center gap-4">
       <div className="w-[100%]">
-        <img src="boy.png" alt="Portfolio"/>
+        <img src="boy.png" alt="Portfolio" />
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-5xl font-bold">
@@ -27,7 +27,7 @@ const HomePage = () => {
             loop
           />
         </span>
-        <p className="w-[80%] pt-2">
+        <p className="w-[80%] pt-2 text-gray-300">
           Committed Software Developer with a strong passion for building cool
           and functional software. Obsessed with security, always hunting for
           vulnerabilities. I'm always excited to learn new things along the way.
