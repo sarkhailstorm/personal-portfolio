@@ -40,7 +40,7 @@ const TopNavbar = () => {
         className="flex justify-center items-center"
         variants={childVariants}
       >
-        <img src="./letter-s.png" alt="" className="w-10 h-10" />
+        <img src="letter-s.png" alt="" className="w-10 h-10" />
       </motion.div>
       <div className="flex gap-4">
         <div className="flex gap-4">
