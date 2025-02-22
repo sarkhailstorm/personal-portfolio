@@ -18,7 +18,9 @@ const HomePage = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 2, delay: 2.5 }}
       >
-        <img src="boy.png" alt="Portfolio" />
+        <motion.img src="boy.png" alt="Portfolio" animate={{ y: [0, 0, 0], scale: [1, 1.1, 1] }} transition={{duration: 5, repeat: Infinity, ease: "linear", delay: 4}} />
+        <div className="absolute bottom-[-35] left-0 w-full h-20 bg-black blur-lg"></div>
+
       </motion.div>
       <div className="flex flex-col gap-2">
         <motion.h1
@@ -64,17 +66,17 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, delay: 2.5 }}
         >
-          <Link
-            href="/services"
+          <a
+            href="cv.pdf" download
             className="max-w-max group relative flex items-center hover:gap-3 p-1 rounded-xl transition-all duration-300 ease-in-out bg-[#800020]"
           >
             <span>
               <MdOutlineReadMore className="text-4xl rounded-full transition-transform duration-300" />
             </span>
             <span className="overflow-hidden opacity-0 whitespace-nowrap w-0 group-hover:w-[8rem] group-hover:opacity-100 transition-all duration-300 ease-in-out">
-              More about me
+              Download CV
             </span>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </motion.div>
