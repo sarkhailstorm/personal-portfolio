@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Loading from "./loading";
 import TopNavbar from "@/components/TopNavbar";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const font = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -21,12 +22,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${font.className} bg-black text-white`}>
-        <Loading />
-        <TopNavbar />
-        <Navbar />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${font.className} dark:bg-black text-white`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Loading />
+          <TopNavbar />
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className="h-screen flex items-center justify-center gap-4">
       <div className="w-[100%]">
-        <img src="boy.png" alt="Portfolio" />
+        <img src="boy.png" alt="Portfolio"/>
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-5xl font-bold">

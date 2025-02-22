@@ -3,6 +3,7 @@ import React from "react";
 import { FaDiscord } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaSignalMessenger } from "react-icons/fa6";
+import { ModeToggle } from "./ModeToggle";
 
 const TopNavbar = () => {
   return (
@@ -36,6 +37,7 @@ const TopNavbar = () => {
           >
             <FaSignalMessenger className="text-xl ease-in-out duration-300 hover:scale-125" />
           </Link>
+          <ModeToggle />
         </div>
         <div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-green-800 hover:scale-110 ease-in-out duration-300 cursor-pointer">
           <Link href="/contact">Hire Me</Link>
