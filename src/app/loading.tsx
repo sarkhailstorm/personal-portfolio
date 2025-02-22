@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const Loading = () => {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
-  
+
   useEffect(() => {
     setIsLoading(true);
     const timer = setTimeout(() => {
