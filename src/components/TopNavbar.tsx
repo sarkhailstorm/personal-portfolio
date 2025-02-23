@@ -40,7 +40,7 @@ const TopNavbar = () => {
         className="flex justify-center items-center"
         variants={childVariants}
       >
-        <img src="letter-s.png" alt="" className="w-10 h-10" />
+        <motion.img src="3d-modeling.png" alt="Logo" className="w-12 h-12" animate={{rotate: 360}} transition={{duration: 8, repeat: Infinity, ease: "linear"}} />
       </motion.div>
       <div className="flex gap-4">
         <div className="flex gap-4">

@@ -1,7 +1,6 @@
 "use client";
 import { ReactTyped } from "react-typed";
 import { MdOutlineReadMore } from "react-icons/md";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const HomePage = () => {
