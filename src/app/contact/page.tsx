@@ -38,8 +38,12 @@ const ContactPage = () => {
       setTimeout(() => {
         setStatus("");
       }, 2000);
-    } else {
+    } 
+    else {
       setStatus("Failed! Try again.");
+      setTimeout(() => {
+        setStatus("");
+      }, 2000);
     }
   };
 
@@ -64,6 +68,7 @@ const ContactPage = () => {
           <Label htmlFor="name">Name</Label>
           <Input
             className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
+            required
             type="text"
             id="name"
             name="name"
@@ -76,6 +81,7 @@ const ContactPage = () => {
           <Label htmlFor="email">Email</Label>
           <Input
             className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
+            required
             type="email"
             id="email"
             name="email"
@@ -88,6 +94,7 @@ const ContactPage = () => {
           <Label htmlFor="message">Message</Label>
           <Textarea
             className="resize-none lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
+            required
             id="message"
             rows={6}
             name="message"
