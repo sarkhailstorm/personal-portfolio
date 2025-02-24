@@ -10,25 +10,25 @@ import {motion} from "framer-motion";
 
 const ContactPage = () => {
   return (
-    <div className="flex justify-center gap-40 items-center h-screen">
+    <div className="flex justify-center gap-32 items-center h-screen">
       <div className="w-[30%]">
         <ContactSvg />
       </div>
       <div className="w-[30%] flex flex-col gap-4">
-        <h1 className="font-bold text-2xl text-blue-600 mt-5">Let's Connect</h1>
+        <h1 className="font-bold text-2xl text-[#007bff] mt-5">Let's Connect</h1>
         <div className="flex flex-col gap-2">
           <Label htmlFor="username">Username</Label>
-          <Input className="text-xl" type="text" id="username" name="username" placeholder="Username" />
+          <Input className="lg:py-5" type="text" id="username" name="username" placeholder="Username" />
         </div>
         <div className="flex flex-col gap-2">
           <Label htmlFor="email">Email</Label>
-          <Input type="email" id="email" name="email" placeholder="Email" />
+          <Input className="lg:py-5" type="email" id="email" name="email" placeholder="Email" />
         </div>
         <div className="flex flex-col gap-2">
           <Label htmlFor="message">Message</Label>
           <Textarea className="resize-none" id="message" rows={6} name="message" placeholder="Drop a message..."/>
         </div>
-          <Button className="bg-[#800020] text-white">Submit</Button>
+          <Button className="bg-[#800020] hover:bg-[#800020] hover:scale-95 ease-in-out duration-300 text-white">Submit</Button>
       </div>
     </div>
   );
