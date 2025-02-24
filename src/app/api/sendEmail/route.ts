@@ -21,10 +21,11 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: email, 
-      to: process.env.EMAIL, 
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
       subject: `New Contact Form Submission from ${name}`,
       text: `Name: ${name}\n\nEmail: ${email}\n\nMessage: ${message}`,
+      replyTo: email,
     };
 
     await transporter.sendMail(mailOptions);
@@ -32,10 +33,7 @@ export async function POST(req: Request) {
       { message: "Email sent successfully!" },
       { status: 200 }
     );
-  } 
-  
-  catch (error) {
-    console.error("Error sending email:", error);
+  } catch (error) {
     return NextResponse.json(
       { message: "Failed to send email", error },
       { status: 500 }
