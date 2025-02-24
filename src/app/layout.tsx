@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Loading from "./loading";
 import TopNavbar from "@/components/TopNavbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Toaster } from "react-hot-toast";
 
 const font = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -13,7 +14,7 @@ const font = Sora({
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Created by Sarkhail using Next.js",
+  description: "Created by Sarkhail.",
 };
 
 export default function RootLayout({
@@ -30,6 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster position="top-center" />
           <Loading />
           <TopNavbar />
           <Navbar />

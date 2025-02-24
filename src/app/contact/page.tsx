@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const ContactPage = () => {
     message: "",
   });
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -24,6 +26,7 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     setStatus("Sending...");
 
     const response = await fetch("/api/sendEmail", {
@@ -33,17 +36,12 @@ const ContactPage = () => {
     });
 
     if (response.ok) {
+      setStatus("");
+      setLoading(false);
+      toast.success("Email sent successfully!", { duration: 5000 });
       setFormData({ name: "", email: "", message: "" });
-      setStatus("Submitted!");
-      setTimeout(() => {
-        setStatus("");
-      }, 2000);
-    } 
-    else {
-      setStatus("Failed! Try again.");
-      setTimeout(() => {
-        setStatus("");
-      }, 2000);
+    } else {
+      toast.error("Failed to send email!", { duration: 5000 });
     }
   };
 
@@ -64,8 +62,10 @@ const ContactPage = () => {
         >
           _______Let's Connect_______
         </motion.h1>
-        <div className="flex flex-col gap-2">
-          <Label htmlFor="name">Name</Label>
+        <div className="flex flex-col gap-1">
+          <Label htmlFor="name" className="text-[16px]">
+            Name
+          </Label>
           <Input
             className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
             required
@@ -78,7 +78,9 @@ const ContactPage = () => {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email" className="text-[16px]">
+            Email
+          </Label>
           <Input
             className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
             required
@@ -91,7 +93,9 @@ const ContactPage = () => {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <Label htmlFor="message">Message</Label>
+          <Label htmlFor="message" className="text-[16px]">
+            Message
+          </Label>
           <Textarea
             className="resize-none lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
             required
@@ -105,9 +109,13 @@ const ContactPage = () => {
         </div>
         <Button
           type="submit"
-          className="bg-[#0262c9] hover:bg-[#2173cb] hover:scale-95 ease-in-out transition-transform duration-300 text-white"
+          className={`bg-[#0262c9] hover:bg-[#2173cb] hover:scale-95 ease-in-out transition-transform duration-300 text-white ${
+            loading
+              ? "bg-[#093360] text-[#949494] hover:bg-[#093360] hover:scale-100"
+              : "bg-[#0262c9]"
+          }`}
         >
-          {status || "Submit"}
+          {loading ? status : "Send"}
         </Button>
       </motion.form>
       <motion.div

@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       from: email, 
       to: process.env.EMAIL, 
       subject: `New Contact Form Submission from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Name: ${name}\n\nEmail: ${email}\n\nMessage: ${message}`,
     };
 
     await transporter.sendMail(mailOptions);
