@@ -16,7 +16,7 @@ const ContactPage = () => {
     message: "",
   });
   const [status, setStatus] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,7 +26,7 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
+    setIsLoading(true);
     setStatus("Sending...");
 
     const response = await fetch("/api/sendEmail", {
@@ -37,7 +37,7 @@ const ContactPage = () => {
 
     if (response.ok) {
       setStatus("");
-      setLoading(false);
+      setIsLoading(false);
       toast.success("Email sent successfully!", { duration: 5000 });
       setFormData({ name: "", email: "", message: "" });
     } else {
@@ -110,12 +110,12 @@ const ContactPage = () => {
         <Button
           type="submit"
           className={`bg-[#0262c9] hover:bg-[#2173cb] hover:scale-95 ease-in-out transition-transform duration-300 text-white ${
-            loading
+            isLoading
               ? "bg-[#093360] text-[#949494] hover:bg-[#093360] hover:scale-100"
               : "bg-[#0262c9]"
           }`}
         >
-          {loading ? status : "Send"}
+          {isLoading ? status : "Send"}
         </Button>
       </motion.form>
       <motion.div
