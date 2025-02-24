@@ -45,24 +45,21 @@ const ContactPage = () => {
 
   return (
     <div className="flex justify-center gap-32 items-center h-screen">
-      <motion.div
-        className="w-[30%] mt-8"
-        initial={{ opacity: 0, x: -100, y: 200 }}
-        animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ delay: 2.5, duration: 1 }}
-      >
-        <ContactSvg />
-      </motion.div>
       <motion.form
         onSubmit={handleSubmit}
         className="w-[30%] flex flex-col gap-4"
-        initial={{ opacity: 0, x: 200, y: 200 }}
+        initial={{ opacity: 0, x: -100, y: 200 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ delay: 2.5, duration: 1 }}
+        transition={{ delay: 2.5, duration: 1.5 }}
       >
-        <h1 className="font-bold text-2xl text-[#007bff] mt-8">
-          Let's Connect
-        </h1>
+        <motion.h1
+          className="font-bold text-2xl text-[#007bff] mt-8 mb-2 hover:"
+          initial={{ opacity: 0, x: -200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 2.5, duration: 1.5 }}
+        >
+          _______Let's Connect_______
+        </motion.h1>
         <div className="flex flex-col gap-2">
           <Label htmlFor="name">Name</Label>
           <Input
@@ -106,6 +103,14 @@ const ContactPage = () => {
           {status || "Submit"}
         </Button>
       </motion.form>
+      <motion.div
+        className="w-[30%] mt-8"
+        initial={{ opacity: 0, x: 200, y: 200 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ delay: 2.5, duration: 1.5 }}
+      >
+        <ContactSvg />
+      </motion.div>
     </div>
   );
 };
