@@ -33,30 +33,40 @@ const ContactPage = () => {
     });
 
     if (response.ok) {
-      setFormData({name: "", email: "", message: ""});
+      setFormData({ name: "", email: "", message: "" });
       setStatus("Submitted!");
       setTimeout(() => {
         setStatus("");
       }, 2000);
-    }
-    else {
-      setStatus("Failed! Try again.")
+    } else {
+      setStatus("Failed! Try again.");
     }
   };
 
   return (
     <div className="flex justify-center gap-32 items-center h-screen">
-      <div className="w-[30%]">
+      <motion.div
+        className="w-[30%] mt-8"
+        initial={{ opacity: 0, x: -100, y: 200 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ delay: 2.5, duration: 1 }}
+      >
         <ContactSvg />
-      </div>
-      <form onSubmit={handleSubmit} className="w-[30%] flex flex-col gap-4">
-        <h1 className="font-bold text-2xl text-[#007bff] mt-5">
+      </motion.div>
+      <motion.form
+        onSubmit={handleSubmit}
+        className="w-[30%] flex flex-col gap-4"
+        initial={{ opacity: 0, x: 200, y: 200 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ delay: 2.5, duration: 1 }}
+      >
+        <h1 className="font-bold text-2xl text-[#007bff] mt-8">
           Let's Connect
         </h1>
         <div className="flex flex-col gap-2">
-          <Label htmlFor="username">Username</Label>
+          <Label htmlFor="name">Name</Label>
           <Input
-            className="lg:py-5"
+            className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
             type="text"
             id="name"
             name="name"
@@ -68,7 +78,7 @@ const ContactPage = () => {
         <div className="flex flex-col gap-2">
           <Label htmlFor="email">Email</Label>
           <Input
-            className="lg:py-5"
+            className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
             type="email"
             id="email"
             name="email"
@@ -80,7 +90,7 @@ const ContactPage = () => {
         <div className="flex flex-col gap-2">
           <Label htmlFor="message">Message</Label>
           <Textarea
-            className="resize-none"
+            className="resize-none lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
             id="message"
             rows={6}
             name="message"
@@ -89,10 +99,13 @@ const ContactPage = () => {
             value={formData.message}
           />
         </div>
-        <Button type="submit" className="bg-[#800020] hover:bg-[#800020] hover:scale-95 ease-in-out duration-300 text-white">
+        <Button
+          type="submit"
+          className="bg-[#0262c9] hover:bg-[#2173cb] hover:scale-95 ease-in-out transition-transform duration-300 text-white"
+        >
           {status || "Submit"}
         </Button>
-      </form>
+      </motion.form>
     </div>
   );
 };
