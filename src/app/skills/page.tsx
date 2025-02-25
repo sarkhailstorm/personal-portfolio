@@ -73,11 +73,11 @@ const SkillsPage = () => {
             >
               {[...upperMarquee, ...upperMarquee].map((skill, index) => (
                 <Tooltip key={index}>
-                  <TooltipTrigger asChild>
+                  <TooltipTrigger asChild className="">
                     <img
-                      className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-white ${
+                      className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
                         skill === "Three.js.svg"
-                          ? "bg-[#AAAAAA] p-2"
+                          ? "bg-[#AAAAAA] p-1"
                           : "bg-black"
                       }`}
                       src={skill}
@@ -100,9 +100,9 @@ const SkillsPage = () => {
                 <Tooltip key={index}>
                   <TooltipTrigger asChild>
                     <img
-                      className={`w-16 rounded-lg ${
+                      className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
                         skill === "Next.js.svg" || skill === "Express.svg"
-                          ? "bg-[#AAAAAA] p-2"
+                          ? "bg-[#AAAAAA] p-1"
                           : "bg-black"
                       }`}
                       src={skill}
