@@ -12,7 +12,7 @@ const Loading = () => {
     setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [pathname]);
 
