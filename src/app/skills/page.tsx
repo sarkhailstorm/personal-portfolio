@@ -9,12 +9,12 @@ const upperMarquee = [
   "TypeScript.svg",
   "Python.svg",
   "React.svg",
-  "Figma.svg",
-  "Next.js.svg",
-  "Node.js.svg",
-  "Express.svg",
-  "MongoDB.svg",
-  "Docker.svg",
+  "HTML5.svg",
+  "CSS3.svg",
+  "JavaScript.svg",
+  "TypeScript.svg",
+  "Python.svg",
+  "React.svg",
 ];
 
 const lowerMarquee = [
@@ -24,12 +24,12 @@ const lowerMarquee = [
   "Express.svg",
   "MongoDB.svg",
   "Docker.svg",
-  "HTML5.svg",
-  "CSS3.svg",
-  "JavaScript.svg",
-  "TypeScript.svg",
-  "Python.svg",
-  "React.svg",
+  "Figma.svg",
+  "Next.js.svg",
+  "Node.js.svg",
+  "Express.svg",
+  "MongoDB.svg",
+  "Docker.svg",
 ];
 
 const SkillsPage = () => {
@@ -40,14 +40,34 @@ const SkillsPage = () => {
         <h2 className="text-2xl">Alright, let's fill you in on that!</h2>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <div className="container mx-auto bg-gray-800 w-[78%] p-4 rounded-2xl flex gap-8 overflow-x-hidden ">
+        <div className="container mx-auto marquee-container p-4 rounded-2xl flex flex-col gap-8 overflow-x-hidden">
           <motion.div
-            className="flex gap-4"
+            className="flex gap-12"
             animate={{ x: ["0%", "-100%"] }}
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           >
             {[...upperMarquee, ...upperMarquee].map((skill, index) => (
-              <img className="w-16" key={index} src={skill} alt={`Image ${index}`} />
+              <img
+                className="w-16"
+                key={index}
+                src={skill}
+                alt={`Image ${index}`}
+              />
+            ))}
+          </motion.div>
+          <div className="border-2 border-gray-800"></div>
+          <motion.div
+            className="flex gap-12"
+            animate={{ x: ["-100%", "0"] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          >
+            {[...lowerMarquee, ...lowerMarquee].map((skill, index) => (
+              <img
+                className={`w-16 rounded-2xl ${skill === "Next.js.svg" || skill === "Express.svg" ? "bg-gray-700 p-2": "bg-black" }`}
+                key={index}
+                src={skill}
+                alt={`Image ${index}`}
+              />
             ))}
           </motion.div>
         </div>
