@@ -61,10 +61,31 @@ const SkillsPage = () => {
     <TooltipProvider>
       <div className="flex flex-col h-screen gap-16 pt-32">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-4xl">Wanna know about my skills?</h1>
-          <h2 className="text-2xl">Alright, let me fill you in!</h2>
+          <motion.h1
+            initial={{ y: -200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="text-4xl font-bold"
+          >
+            <span className="text-red-600">Curious</span> about{" "}
+            <span className="text-red-600">my</span> skills{" "}
+            <span className="text-red-600">?</span>
+          </motion.h1>
+          <motion.h2
+            initial={{ y: -200, opacity: 0 }}
+            animate={{ y: 0, x: [-200, 200, 0], opacity: 1 }}
+            transition={{ duration: 1, delay: 3 }}
+            className="text-2xl font-semibold text-blue-500"
+          >
+            Alright, let me fill you in!
+          </motion.h2>
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <motion.div
+          className="flex flex-col justify-center items-center"
+          initial={{ y: 200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 4 }}
+        >
           <div className="container mx-auto marquee-container p-4 rounded-2xl flex flex-col gap-8 overflow-x-hidden">
             <motion.div
               className="flex gap-12"
@@ -73,12 +94,10 @@ const SkillsPage = () => {
             >
               {[...upperMarquee, ...upperMarquee].map((skill, index) => (
                 <Tooltip key={index}>
-                  <TooltipTrigger asChild className="">
+                  <TooltipTrigger asChild>
                     <img
                       className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
-                        skill === "Three.js.svg"
-                          ? "bg-[#AAAAAA] p-1"
-                          : "bg-black"
+                        skill === "Three.js.svg" ? "bg-white p-1" : "bg-black"
                       }`}
                       src={skill}
                       alt={`Image ${index}`}
@@ -102,7 +121,7 @@ const SkillsPage = () => {
                     <img
                       className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
                         skill === "Next.js.svg" || skill === "Express.svg"
-                          ? "bg-[#AAAAAA] p-1"
+                          ? "bg-white p-1"
                           : "bg-black"
                       }`}
                       src={skill}
@@ -116,7 +135,7 @@ const SkillsPage = () => {
               ))}
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </TooltipProvider>
   );
