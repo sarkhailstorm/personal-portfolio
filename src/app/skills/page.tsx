@@ -8,13 +8,23 @@ const upperMarquee = [
   "JavaScript.svg",
   "TypeScript.svg",
   "Python.svg",
+  "C.svg",
+  "C++.svg",
   "React.svg",
+  "Three.js.svg",
+  "Bootstrap.svg",
+  "mui.svg",
   "HTML5.svg",
   "CSS3.svg",
   "JavaScript.svg",
   "TypeScript.svg",
   "Python.svg",
+  "C.svg",
+  "C++.svg",
   "React.svg",
+  "Three.js.svg",
+  "Bootstrap.svg",
+  "mui.svg",
 ];
 
 const lowerMarquee = [
@@ -48,7 +58,7 @@ const SkillsPage = () => {
           >
             {[...upperMarquee, ...upperMarquee].map((skill, index) => (
               <img
-                className="w-16"
+                className={`w-16 rounded-lg ${skill === "Three.js.svg" ? "bg-gray-700 p-2": "bg-black" }`}
                 key={index}
                 src={skill}
                 alt={`Image ${index}`}
@@ -63,7 +73,7 @@ const SkillsPage = () => {
           >
             {[...lowerMarquee, ...lowerMarquee].map((skill, index) => (
               <img
-                className={`w-16 rounded-2xl ${skill === "Next.js.svg" || skill === "Express.svg" ? "bg-gray-700 p-2": "bg-black" }`}
+                className={`w-16 rounded-lg ${skill === "Next.js.svg" || skill === "Express.svg" ? "bg-gray-700 p-2": "bg-black" }`}
                 key={index}
                 src={skill}
                 alt={`Image ${index}`}
