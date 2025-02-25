@@ -31,7 +31,7 @@ const childVariants = {
 const TopNavbar = () => {
   return (
     <motion.nav
-      className="fixed left-0 p-4 flex items-center justify-between w-full px-24 py-8"
+      className="fixed left-0 p-4 flex items-center justify-between w-full px-24 py-4"
       variants={containerVariants}
       initial="hidden"
       animate="show"
