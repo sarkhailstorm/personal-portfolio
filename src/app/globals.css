@@ -68,11 +68,8 @@
 }
 
 .marquee-container {
-  position: relative;
   width: 55%;
   overflow: hidden;
-  padding: 16px;
-  border-radius: 16px;
 
   -webkit-mask-image: linear-gradient(
     to right,

@@ -8,6 +8,7 @@ const upperMarquee = [
   "JavaScript.svg",
   "TypeScript.svg",
   "Python.svg",
+  "Java.svg",
   "C.svg",
   "C++.svg",
   "React.svg",
@@ -19,6 +20,7 @@ const upperMarquee = [
   "JavaScript.svg",
   "TypeScript.svg",
   "Python.svg",
+  "Java.svg",
   "C.svg",
   "C++.svg",
   "React.svg",
@@ -32,14 +34,20 @@ const lowerMarquee = [
   "Next.js.svg",
   "Node.js.svg",
   "Express.svg",
+  "PostgreSQL.svg",
   "MongoDB.svg",
+  "Git.svg",
   "Docker.svg",
+  "Linux.svg",
   "Figma.svg",
   "Next.js.svg",
   "Node.js.svg",
   "Express.svg",
+  "PostgreSQL.svg",
   "MongoDB.svg",
+  "Git.svg",
   "Docker.svg",
+  "Linux.svg",
 ];
 
 const SkillsPage = () => {
@@ -53,12 +61,14 @@ const SkillsPage = () => {
         <div className="container mx-auto marquee-container p-4 rounded-2xl flex flex-col gap-8 overflow-x-hidden">
           <motion.div
             className="flex gap-12"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            animate={{ x: ["0%", "-200%"] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
           >
             {[...upperMarquee, ...upperMarquee].map((skill, index) => (
               <img
-                className={`w-16 rounded-lg ${skill === "Three.js.svg" ? "bg-gray-700 p-2": "bg-black" }`}
+                className={`w-16 rounded-lg ${
+                  skill === "Three.js.svg" ? "bg-[#AAAAAA] p-2" : "bg-black"
+                }`}
                 key={index}
                 src={skill}
                 alt={`Image ${index}`}
@@ -68,12 +78,16 @@ const SkillsPage = () => {
           <div className="border-2 border-gray-800"></div>
           <motion.div
             className="flex gap-12"
-            animate={{ x: ["-100%", "0"] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            animate={{ x: ["-150%", "0"] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
           >
             {[...lowerMarquee, ...lowerMarquee].map((skill, index) => (
               <img
-                className={`w-16 rounded-lg ${skill === "Next.js.svg" || skill === "Express.svg" ? "bg-gray-700 p-2": "bg-black" }`}
+                className={`w-16 rounded-lg ${
+                  skill === "Next.js.svg" || skill === "Express.svg"
+                    ? "bg-[#AAAAAA] p-2"
+                    : "bg-black"
+                }`}
                 key={index}
                 src={skill}
                 alt={`Image ${index}`}
