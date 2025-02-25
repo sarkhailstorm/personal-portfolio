@@ -77,7 +77,7 @@ const SkillsPage = () => {
             transition={{ duration: 1, delay: 3 }}
             className="text-2xl font-semibold text-blue-500"
           >
-            Alright, let me fill you in!
+            Alright, let me fill you in...
           </motion.h2>
         </div>
         <motion.div

@@ -55,12 +55,12 @@ const ContactPage = () => {
         transition={{ delay: 2.5, duration: 1.5 }}
       >
         <motion.h1
-          className="font-bold text-2xl text-[#007bff] mt-8 mb-2 hover:"
+          className="font-bold text-2xl text-[#007bff] mt-8 mb-2 tracking-widest"
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2.5, duration: 1.5 }}
         >
-          _______Let's Connect_______
+        Let's Connect
         </motion.h1>
         <div className="flex flex-col gap-1">
           <Label htmlFor="name" className="text-[16px]">
