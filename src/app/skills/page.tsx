@@ -20,7 +20,7 @@ const upperMarquee = [
   "React.svg",
   "Three.js.svg",
   "Bootstrap.svg",
-  "MUI.svg",
+  "Tailwind CSS.svg",
   "HTML.svg",
   "CSS.svg",
   "JavaScript.svg",
@@ -32,7 +32,7 @@ const upperMarquee = [
   "React.svg",
   "Three.js.svg",
   "Bootstrap.svg",
-  "MUI.svg",
+  "Tailwind CSS.svg",
 ];
 
 const lowerMarquee = [
