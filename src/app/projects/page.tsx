@@ -15,7 +15,7 @@ const projects = [
   },
   {
     img: "Task Management App.png",
-    title: "Cloud File Manager",
+    title: "Task Management App",
     desc: "This is a beautiful web app that will blow your head.",
   },
   {
@@ -25,7 +25,7 @@ const projects = [
   },
   {
     img: "Cloud File Manager.png",
-    title: "Task Management App",
+    title: "Cloud File Manager",
     desc: "This is a beautiful web app that will blow your head.",
   },
   {

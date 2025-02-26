@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed right-0 flex flex-col gap-4 justify-center items-end h-screen p-4"
+      className="fixed right-0 flex flex-col gap-4 justify-center items-end h-screen p-4 z-50"
       variants={containerVariants}
       initial="hidden"
       animate="show"
