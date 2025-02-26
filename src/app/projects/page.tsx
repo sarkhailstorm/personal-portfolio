@@ -1,8 +1,39 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
-
+const data = [
+  {
+    img: "Portfolio.png",
+    title: "Portfolio Website",
+    desc: "This is a beautiful web app that will blow your head.",
+  },
+  {
+    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    title: "3D Portfolio Website",
+    desc: "This is a beautiful web app that will blow your head.",
+  },
+  {
+    img: "3D Portfolio.png",
+    title: "Smart Home App",
+    desc: "This is a beautiful web app that will blow your head.",
+  },
+  {
+    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    title: "Weather Application",
+    desc: "This is a beautiful web app that will blow your head.",
+  },
+  {
+    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    title: "Task Management App",
+    desc: "This is a beautiful web app that will blow your head.",
+  },
+  {
+    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    title: "Google Calculator",
+    desc: "This is a beautiful web app that will blow your head.",
+  },
+];
 
 const ProjectsPage = () => {
   return (
@@ -11,78 +42,20 @@ const ProjectsPage = () => {
         <h1 className="text-4xl font-bold tracking-wider">My Work</h1>
       </div>
       <div className="flex gap-3 overflow-y-scroll flex-wrap justify-center items-center h-[345px]">
-        <div className="card bg-base-100 w-80 shadow-xl">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-        <div className="card bg-base-100 w-80 shadow-xl">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-        <div className="card bg-base-100 w-80 shadow-xl">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </div>
-        <motion.div initial={{opacity: 0, y: 200}} whileInView={{opacity: 1, y: 0}} transition={{duration: 1}}  className="card bg-base-100 w-80 shadow-xl">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </motion.div>
-        <motion.div initial={{opacity: 0, y: 200}} whileInView={{opacity: 1, y: 0}} transition={{duration: 1, delay: 0.2}}  className="card bg-base-100 w-80 shadow-xl">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </motion.div>
-        <motion.div initial={{opacity: 0, y: 200}} whileInView={{opacity: 1, y: 0}} transition={{duration: 1, delay: 0.3}} className="card bg-base-100 w-80 shadow-xl">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-          </div>
-        </motion.div>
+        {data.map((info, index) => (
+          <motion.div key={index} className="card bg-base-100 w-80 border-2 border-gray-800 shadow-xl">
+            <figure>
+              <img className=""
+                src={info.img}
+                alt="Shoes"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">{info.title}</h2>
+              <p>{info.desc}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
