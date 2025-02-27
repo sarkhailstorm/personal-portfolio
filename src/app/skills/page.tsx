@@ -9,51 +9,51 @@ import {
 import { motion } from "framer-motion";
 
 const upperMarquee = [
-  "HTML.svg",
-  "CSS.svg",
-  "JavaScript.svg",
-  "TypeScript.svg",
-  "Python.svg",
-  "Java.svg",
-  "C.svg",
-  "C++.svg",
-  "React.svg",
-  "Three.js.svg",
-  "Bootstrap.svg",
-  "Tailwind CSS.svg",
-  "HTML.svg",
-  "CSS.svg",
-  "JavaScript.svg",
-  "TypeScript.svg",
-  "Python.svg",
-  "Java.svg",
-  "C.svg",
-  "C++.svg",
-  "React.svg",
-  "Three.js.svg",
-  "Bootstrap.svg",
-  "Tailwind CSS.svg",
+  "/HTML.svg",
+  "/CSS.svg",
+  "/JavaScript.svg",
+  "/TypeScript.svg",
+  "/Python.svg",
+  "/Java.svg",
+  "/C.svg",
+  "/C++.svg",
+  "/React.svg",
+  "/Three.js.svg",
+  "/Bootstrap.svg",
+  "/Tailwind CSS.svg",
+  "/HTML.svg",
+  "/CSS.svg",
+  "/JavaScript.svg",
+  "/TypeScript.svg",
+  "/Python.svg",
+  "/Java.svg",
+  "/C.svg",
+  "/C++.svg",
+  "/React.svg",
+  "/Three.js.svg",
+  "/Bootstrap.svg",
+  "/Tailwind CSS.svg",
 ];
 
 const lowerMarquee = [
-  "Figma.svg",
-  "Next.js.svg",
-  "Node.js.svg",
-  "Express.svg",
-  "PostgreSQL.svg",
-  "MongoDB.svg",
-  "Git.svg",
-  "Docker.svg",
-  "Linux.svg",
-  "Figma.svg",
-  "Next.js.svg",
-  "Node.js.svg",
-  "Express.svg",
-  "PostgreSQL.svg",
-  "MongoDB.svg",
-  "Git.svg",
-  "Docker.svg",
-  "Linux.svg",
+  "/Figma.svg",
+  "/Next.js.svg",
+  "/Node.js.svg",
+  "/Express.svg",
+  "/PostgreSQL.svg",
+  "/MongoDB.svg",
+  "/Git.svg",
+  "/Docker.svg",
+  "/Linux.svg",
+  "/Figma.svg",
+  "/Next.js.svg",
+  "/Node.js.svg",
+  "/Express.svg",
+  "/PostgreSQL.svg",
+  "/MongoDB.svg",
+  "/Git.svg",
+  "/Docker.svg",
+  "/Linux.svg",
 ];
 
 const SkillsPage = () => {
@@ -97,14 +97,14 @@ const SkillsPage = () => {
                   <TooltipTrigger asChild>
                     <img
                       className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
-                        skill === "Three.js.svg" ? "bg-white p-1" : "bg-black"
+                        skill === "/Three.js.svg" ? "bg-white p-1" : "bg-black"
                       }`}
                       src={skill}
                       alt={`Image ${index}`}
                     />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{skill.replace(".svg", "")}</p>
+                    <p>{skill.replace(/^\/|\.svg$/g, "")}</p> {/* Regex */}
                   </TooltipContent>
                 </Tooltip>
               ))}
@@ -120,7 +120,7 @@ const SkillsPage = () => {
                   <TooltipTrigger asChild>
                     <img
                       className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
-                        skill === "Next.js.svg" || skill === "Express.svg"
+                        skill === "/Next.js.svg" || skill === "/Express.svg"
                           ? "bg-white p-1"
                           : "bg-black"
                       }`}
@@ -129,7 +129,7 @@ const SkillsPage = () => {
                     />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{skill.replace(".svg", "")}</p>
+                    <p>{skill.replace(/^\/|\.svg$/g, "")}</p> {/* Regex */}
                   </TooltipContent>
                 </Tooltip>
               ))}
