@@ -48,7 +48,7 @@ const TopNavbar = () => {
             variants={childVariants}
             href="/"
             title="Discord"
-            className="bg-[#5865F2] rounded-full w-9
+            className="bg-gray-700 hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-9
             h-9 flex justify-center items-center"
           >
             <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125 " />
@@ -59,7 +59,7 @@ const TopNavbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Github"
-            className="bg-blue-100 text-black rounded-full w-9 h-9 flex justify-center items-center"
+            className="bg-gray-700 hover:bg-blue-100 ease-in-out duration-300 text-black rounded-full w-9 h-9 flex justify-center items-center"
           >
             <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125" />
           </motion.a>
@@ -67,13 +67,13 @@ const TopNavbar = () => {
             variants={childVariants}
             href="/"
             title="Signal Messenger"
-            className="bg-[#184fbc] rounded-full w-9 h-9 flex justify-center items-center"
+            className="bg-gray-700 hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-9 h-9 flex justify-center items-center"
           >
             <FaSignalMessenger className="text-xl ease-in-out duration-300 hover:scale-125" />
           </motion.a>
           <ModeToggle />
         </div>
-        <motion.div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-green-800 hover:scale-110 ease-in-out duration-300 cursor-pointer">
+        <motion.div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-blue-700 hover:scale-110 ease-in-out duration-300 cursor-pointer">
           <Link href="/contact">Hire Me</Link>
         </motion.div>
       </div>

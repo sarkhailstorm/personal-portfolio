@@ -53,7 +53,7 @@ const Navbar = () => {
           <Link
             href={href}
             className={`group relative flex items-center hover:gap-3 p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5 ${
-              pathname === href ? "bg-green-800" : "bg-[#800020]"
+              pathname === href ? "bg-blue-700" : "bg-[#800020]"
             }`}
           >
             <motion.span className="overflow-hidden opacity-0 w-0 group-hover:w-[4.4rem] group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-md">
