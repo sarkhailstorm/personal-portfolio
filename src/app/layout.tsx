@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import SideBar from "@/components/SideBar";
 import Loading from "./loading";
-import TopNavbar from "@/components/TopNavbar";
+import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "react-hot-toast";
 
@@ -33,8 +33,8 @@ export default function RootLayout({
         >
           <Toaster position="top-center" />
           <Loading />
-          <TopNavbar />
           <Navbar />
+          <SideBar />
           {children}
         </ThemeProvider>
       </body>

@@ -1,21 +1,11 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { IoHome } from "react-icons/io5";
-import { IoPerson } from "react-icons/io5";
-import { FaTools } from "react-icons/fa";
-import { FaFolderOpen } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa6";
-import { usePathname } from "next/navigation";
+import { FaDiscord } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaSignalMessenger } from "react-icons/fa6";
+import { ModeToggle } from "./ModeToggle";
 import { motion } from "framer-motion";
-
-const navLinks = [
-  { href: "/", label: "Home", icon: <IoHome /> },
-  { href: "/services", label: "Services", icon: <IoPerson /> },
-  { href: "/skills", label: "Skills", icon: <FaTools /> },
-  { href: "/projects", label: "Projects", icon: <FaFolderOpen /> },
-  { href: "/contact", label: "Contact", icon: <FaEnvelope /> },
-];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,7 +20,7 @@ const containerVariants = {
 };
 
 const childVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: -50 },
   show: {
     opacity: 1,
     y: 0,
@@ -38,35 +28,57 @@ const childVariants = {
   },
 };
 
-const Navbar = () => {
-  const pathname = usePathname();
-
+const TopNavbar = () => {
   return (
     <motion.nav
-      className="fixed right-0 flex flex-col gap-4 justify-center items-end h-screen p-4 z-50"
+      className="fixed left-0 p-4 flex items-center justify-between w-full px-24 py-4"
       variants={containerVariants}
       initial="hidden"
       animate="show"
     >
-      {navLinks.map(({ href, label, icon }) => (
-        <motion.div key={href} variants={childVariants}>
-          <Link
-            href={href}
-            className={`group relative flex items-center hover:gap-3 p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5 ${
-              pathname === href ? "bg-green-800" : "bg-[#800020]"
-            }`}
+      <motion.div
+        className="flex justify-center items-center"
+        variants={childVariants}
+      >
+        <motion.img src="3d-modeling.png" alt="Logo" className="w-12 h-12" animate={{rotate: 360}} transition={{duration: 8, repeat: Infinity, ease: "linear"}} />
+      </motion.div>
+      <div className="flex gap-4">
+        <div className="flex gap-4">
+          <motion.a
+            variants={childVariants}
+            href="/"
+            title="Discord"
+            className="bg-[#5865F2] rounded-full w-9
+            h-9 flex justify-center items-center"
           >
-            <motion.span className="overflow-hidden opacity-0 w-0 group-hover:w-[4.4rem] group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-md">
-              {label}
-            </motion.span>
-            <motion.span className="text-white text-3xl transition-transform duration-300">
-              {icon}
-            </motion.span>
-          </Link>
+            <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125 " />
+          </motion.a>
+          <motion.a
+            variants={childVariants}
+            href="https://github.com/sarkhailstorm"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Github"
+            className="bg-blue-100 text-black rounded-full w-9 h-9 flex justify-center items-center"
+          >
+            <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125" />
+          </motion.a>
+          <motion.a
+            variants={childVariants}
+            href="/"
+            title="Signal Messenger"
+            className="bg-[#184fbc] rounded-full w-9 h-9 flex justify-center items-center"
+          >
+            <FaSignalMessenger className="text-xl ease-in-out duration-300 hover:scale-125" />
+          </motion.a>
+          <ModeToggle />
+        </div>
+        <motion.div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-green-800 hover:scale-110 ease-in-out duration-300 cursor-pointer">
+          <Link href="/contact">Hire Me</Link>
         </motion.div>
-      ))}
+      </div>
     </motion.nav>
   );
 };
 
-export default Navbar;
+export default TopNavbar;
