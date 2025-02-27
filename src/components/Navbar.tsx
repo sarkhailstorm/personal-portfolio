@@ -48,8 +48,7 @@ const TopNavbar = () => {
             variants={childVariants}
             href="/"
             title="Discord"
-            className="bg-gray-700 hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-9
-            h-9 flex justify-center items-center"
+            className="bg-gray-700 hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
           >
             <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125 " />
           </motion.a>
@@ -59,15 +58,15 @@ const TopNavbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Github"
-            className="bg-gray-700 hover:bg-blue-100 ease-in-out duration-300 text-black rounded-full w-9 h-9 flex justify-center items-center"
+            className="bg-gray-700 hover:bg-blue-100 ease-in-out duration-300 text-white hover:text-black rounded-full w-[39px] h-[39px] flex justify-center items-center"
           >
-            <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125" />
+            <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125 hover:text-black" />
           </motion.a>
           <motion.a
             variants={childVariants}
             href="/"
             title="Signal Messenger"
-            className="bg-gray-700 hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-9 h-9 flex justify-center items-center"
+            className="bg-gray-700 hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
           >
             <FaSignalMessenger className="text-xl ease-in-out duration-300 hover:scale-125" />
           </motion.a>
