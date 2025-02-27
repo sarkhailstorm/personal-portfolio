@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -52,17 +51,17 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center gap-12 overflow-x-hidden">
+    <div className="h-screen flex flex-col items-center justify-center gap-8 overflow-x-hidden">
       <div>
-        <h1 className="text-4xl font-bold tracking-wider mt-28">
+        <h1 className="text-4xl font-bold tracking-wider mt-24">
           Wanna see my work? <span>There you go!</span>
         </h1>
       </div>
-      <div className="flex gap-5 overflow-y-scroll flex-wrap justify-center items-center h-[380px]">
+      <div className="h-[70vh] w-[85%] overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-purple-700 scrollbar-track-gray-900 scrollbar-thumb-rounded-full scrollbar-track-rounded-full flex flex-wrap justify-center gap-5 p-4">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="card bg-[#0f111a] w-80 border-[1.4px] border-x-indigo-700 border-y-violet-800 shadow-xl"
+            className="card bg-[#0f111a] w-80 border-[1.5px] border-x-indigo-700 border-y-violet-800 shadow-xl"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
