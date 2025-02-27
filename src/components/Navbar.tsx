@@ -12,8 +12,8 @@ const containerVariants = {
   show: {
     opacity: 1,
     transition: {
-      delay: 2.5,
-      staggerChildren: 0.3,
+      delay: 1,
+      staggerChildren: 0.2,
       when: "beforeChildren",
     },
   },
