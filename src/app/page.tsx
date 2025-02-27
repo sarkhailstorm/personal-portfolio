@@ -9,15 +9,15 @@ const HomePage = () => {
       className="h-screen flex items-center justify-center gap-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2, delay: 2.5 }}
+      transition={{ duration: 2, delay: 1 }}
     >
       <motion.div
         className="w-[100%]"
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 2, delay: 2.5 }}
+        transition={{ duration: 2, delay: 1 }}
       >
-        <motion.img src="boy.png" alt="Portfolio" animate={{ y: [0, 0, 0], scale: [1, 1.1, 1] }} transition={{duration: 5, repeat: Infinity, ease: "linear", delay: 4}} />
+        <motion.img src="boy.png" alt="Portfolio" animate={{ y: [0, 0, 0], scale: [1, 1.1, 1] }} transition={{duration: 5, repeat: Infinity, ease: "linear", delay: 1}} />
         <div className="absolute bottom-[-35] left-0 w-full h-20 bg-black blur-lg"></div>
 
       </motion.div>
@@ -26,7 +26,7 @@ const HomePage = () => {
           className="text-5xl font-bold"
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2, delay: 2.5 }}
+          transition={{ duration: 2, delay: 1 }}
         >
           Hiya, I'm<span className="text-[#ff004f]"> Sarkhail</span>
         </motion.h1>
@@ -34,7 +34,7 @@ const HomePage = () => {
           className="text-3xl text-blue-300 font-semibold"
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2, delay: 2.5 }}
+          transition={{ duration: 2, delay: 1 }}
         >
           <ReactTyped
             strings={[
@@ -53,7 +53,7 @@ const HomePage = () => {
           className="w-[80%] pt-2 text-gray-300"
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2, delay: 2.5 }}
+          transition={{ duration: 2, delay: 1 }}
         >
           Committed Software Developer with a strong passion for building cool
           and functional software. Obsessed with security, always hunting for
@@ -63,7 +63,7 @@ const HomePage = () => {
           className="pt-2"
           initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2, delay: 2.5 }}
+          transition={{ duration: 2, delay: 1 }}
         >
           <a
             href="cv.pdf" download

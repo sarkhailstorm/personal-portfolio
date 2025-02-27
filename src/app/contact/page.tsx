@@ -52,13 +52,13 @@ const ContactPage = () => {
         className="w-[30%] flex flex-col gap-4"
         initial={{ opacity: 0, x: -100, y: 200 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ delay: 2.5, duration: 1.5 }}
+        transition={{ delay: 1, duration: 1.5 }}
       >
         <motion.h1
           className="font-bold text-2xl text-[#007bff] mt-8 mb-2 tracking-widest"
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 2.5, duration: 1.5 }}
+          transition={{ delay: 1, duration: 1.5 }}
         >
         Let's Connect
         </motion.h1>
@@ -122,7 +122,7 @@ const ContactPage = () => {
         className="w-[30%] mt-8"
         initial={{ opacity: 0, x: 200, y: 200 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ delay: 2.5, duration: 1.5 }}
+        transition={{ delay: 1, duration: 1.5 }}
       >
         <ContactSvg />
       </motion.div>
