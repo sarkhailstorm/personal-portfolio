@@ -38,7 +38,7 @@ const childVariants = {
   },
 };
 
-const Navbar = () => {
+const SideBar = () => {
   const pathname = usePathname();
 
   return (
@@ -69,4 +69,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SideBar;

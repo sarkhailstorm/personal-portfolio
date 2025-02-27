@@ -28,7 +28,7 @@ const childVariants = {
   },
 };
 
-const TopNavbar = () => {
+const Navbar = () => {
   return (
     <motion.nav
       className="fixed left-0 p-4 flex items-center justify-between w-full px-24 py-4"
@@ -40,7 +40,7 @@ const TopNavbar = () => {
         className="flex justify-center items-center"
         variants={childVariants}
       >
-        <motion.img src="3d-modeling.png" alt="Logo" className="w-12 h-12" animate={{rotate: 360}} transition={{duration: 8, repeat: Infinity, ease: "linear"}} />
+        <img src="/controller.png" alt="Logo" className="w-14 h-14"/>
       </motion.div>
       <div className="flex gap-4">
         <div className="flex gap-4">
@@ -50,7 +50,7 @@ const TopNavbar = () => {
             title="Discord"
             className="bg-gray-700 hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
           >
-            <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125 " />
+            <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125" />
           </motion.a>
           <motion.a
             variants={childVariants}
@@ -80,4 +80,4 @@ const TopNavbar = () => {
   );
 };
 
-export default TopNavbar;
+export default Navbar;
