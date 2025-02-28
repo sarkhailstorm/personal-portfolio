@@ -61,9 +61,37 @@ const details: Record<string, React.ReactNode> = {
   ),
 };
 
+const services = [
+  {
+    img: "Design.png",
+    title: "Design",
+    desc: "I make things look awesome while keeping them easy to use. Good design isn't just about pretty colors—it's about making sure everything flows smoothly and feels right!",
+  },
+  {
+    img: "Development.png",
+    title: "Development",
+    desc: "From front-end magic to back-end logic, I bring ideas to life with clean and efficient code. Whether it’s a website, an app, or a full-stack project, I build things that just work.",
+  },
+  {
+    img: "Problem Solving.png",
+    title: "Problem Solving",
+    desc: "Got a tricky bug or a complex challenge? I love cracking tough problems and finding creative solutions that make everything run smoother and better.",
+  },
+  {
+    img: "Security.png",
+    title: "Security",
+    desc: "Keeping things safe and sound! I build applications with security in mind so there are no nasty surprises—just smooth, secure experiences for users.",
+  },
+  {
+    img: "Efficiency.png",
+    title: "Efficiency",
+    desc: "Fast, optimized, and hassle-free—that’s my style! I focus on making everything run as smoothly as possible, so users don’t have to deal with slow, clunky apps.",
+  },
+];
+
 const CarouselPlugin = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true })
   );
 
   const [activeSection, setActiveSection] =
@@ -83,14 +111,22 @@ const CarouselPlugin = () => {
             onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
+              {services.map((service, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1">
                     <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-4xl font-semibold">
-                          {index + 1}
-                        </span>
+                      <CardContent className="flex flex-col gap-4 aspect-square p-6">
+                        <div>
+                          <img
+                            src={service.img}
+                            alt={`Image ${index}`}
+                            className="w-15 h-15"
+                          />
+                        </div>
+                        <div className="flex flex-col gap-4">
+                          <h1 className="font-bold text-xl">{service.title}</h1>
+                          <p>{service.desc}</p>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>
