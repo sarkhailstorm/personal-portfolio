@@ -61,6 +61,12 @@ const details: Record<string, React.ReactNode> = {
   ),
 };
 
+const stats = [
+  { value: 50, label: "Projects Completed" },
+  { value: 20, label: "Satisfied Clients" },
+  { value: 3, label: "Years of Experience" },
+];
+
 const services = [
   {
     img: "Design.png",
