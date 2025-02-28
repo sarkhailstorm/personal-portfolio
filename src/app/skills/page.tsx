@@ -59,22 +59,34 @@ const lowerMarquee = [
 const SkillsPage = () => {
   return (
     <TooltipProvider>
-      <div className="flex flex-col h-screen gap-16 pt-32">
+      <div className="flex flex-col h-screen gap-16 pt-28">
         <div className="flex flex-col items-center gap-4">
           <motion.h1
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{
+              duration: 3,
+              delay: 1,
+              type: "spring",
+              stiffness: 100,
+              damping: 5,
+              mass: 1,
+            }}
             className="text-4xl font-bold"
           >
-            <span className="text-red-600">Curious</span> about{" "}
-            <span className="text-red-600">my</span> skills{" "}
-            <span className="text-red-600">?</span>
+            Curious about my skills?
           </motion.h1>
           <motion.h2
             initial={{ y: -200, opacity: 0 }}
-            animate={{ y: 0, x: [-200, 200, 0], opacity: 1 }}
-            transition={{ duration: 1, delay: 3 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 3,
+              type: "spring",
+              stiffness: 100,
+              damping: 8,
+              mass: 1,
+            }}
             className="text-2xl font-semibold text-blue-500"
           >
             Alright, let me fill you in...
