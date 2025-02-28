@@ -32,7 +32,7 @@ const details: Record<string, React.ReactNode> = {
     <div className="flex flex-col gap-2">
       <img src="/Coding.png" alt="Logo" className="w-10 h-10" />
       <h1 className="font-bold text-xl">Software Developer</h1>
-      <ul className="flex flex-col gap-2 list-disc pl-2">
+      <ul className="flex flex-col gap-2">
         <li>
           Personal Projects – Built multiple full-stack web applications using
           modern technologies like Next.js etc.
