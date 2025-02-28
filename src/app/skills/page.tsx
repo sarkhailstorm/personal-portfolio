@@ -87,7 +87,7 @@ const SkillsPage = () => {
               damping: 8,
               mass: 1,
             }}
-            className="text-2xl font-semibold text-blue-500"
+            className="text-2xl font-semibold text-blue-400"
           >
             Alright, let me fill you in...
           </motion.h2>
