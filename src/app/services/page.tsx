@@ -62,9 +62,9 @@ const details: Record<string, React.ReactNode> = {
 };
 
 const stats = [
-  { value: 50, label: "Projects Completed" },
-  { value: 20, label: "Satisfied Clients" },
-  { value: 3, label: "Years of Experience" },
+  { value: 50, label: (<p>Projects <br /> Completed</p>) },
+  { value: 20, label: (<p>Satisfied <br /> Clients</p>) },
+  { value: 3, label: (<p>Years of <br /> Experience</p>)},
 ];
 
 const services = [
@@ -143,24 +143,14 @@ const CarouselPlugin = () => {
             <CarouselNext />
           </Carousel>
           <div className="flex gap-8 text-center justify-center">
-            <div className="flex flex-col gap-1">
-              <h2 className="text-3xl font-bold">50+</h2>
-              <p className="text-sm">
-                Projects <br /> Completed
-              </p>
-            </div>
-            <div className="flex flex-col gap-1">
-              <h2 className="text-3xl font-bold">20+</h2>
-              <p className="text-sm">
-                Satisfied <br /> Clients
-              </p>
-            </div>
-            <div className="flex flex-col gap-1">
-              <h2 className="text-3xl font-bold">3+</h2>
-              <p className="text-sm">
-                Years of <br /> Experience
-              </p>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col gap-1">
+                <h2 className="text-3xl font-bold">{stat.value}+</h2>
+                <div className="text-sm">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex flex-col gap-4 w-1/2">
