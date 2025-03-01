@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ProjectsPage = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center gap-12 overflow-x-hidden">
+    <div className="h-screen flex flex-col items-center justify-center gap-10 overflow-x-hidden">
       <div>
         <motion.h1
           initial={{ y: -200, opacity: 0 }}
@@ -30,7 +30,7 @@ const ProjectsPage = () => {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.4 }}
           >
             <figure>
               <img
