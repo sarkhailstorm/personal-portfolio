@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 
 const ServicesPage = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 3500, stopOnInteraction: false })
+    Autoplay({ delay: 3000, stopOnInteraction: false})
   );
 
   const [activeSection, setActiveSection] =
@@ -51,8 +51,8 @@ const ServicesPage = () => {
           <Carousel
             plugins={[plugin.current]}
             className="w-full max-w-xs"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
+            onMouseEnter={() => plugin.current.stop()}
+            onMouseLeave={() => plugin.current.play()}
           >
             <CarouselContent>
               {services.map((service, index) => (
