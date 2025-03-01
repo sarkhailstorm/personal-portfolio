@@ -65,7 +65,7 @@ const ContactPage = () => {
           mass: 1,
         }}
       >
-        Something cool on mind? Let&apos;s connect!
+        Got something cool in mind? Let&apos;s connect!
       </motion.h1>
       <div className="flex gap-4 justify-evenly items-center mx-auto w-full">
         <form onSubmit={handleSubmit} className="flex flex-col w-[30%] gap-4">
