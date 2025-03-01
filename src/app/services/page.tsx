@@ -14,7 +14,7 @@ import { details } from "@/data/details";
 import { services } from "@/data/services";
 import { motion } from "framer-motion";
 
-const CarouselPlugin = () => {
+const ServicesPage = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 3500, stopOnInteraction: false })
   );
@@ -104,4 +104,4 @@ const CarouselPlugin = () => {
   );
 };
 
-export default CarouselPlugin;
+export default ServicesPage;
