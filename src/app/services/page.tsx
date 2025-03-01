@@ -61,9 +61,9 @@ const CarouselPlugin = () => {
             <CarouselNext />
           </Carousel>
           <div className="flex gap-8 text-center justify-center">
-            <CountUp to={50} bottomText="Completed" topText="Projects" />
-            <CountUp to={20} bottomText="Clients" topText="Happy" />
-            <CountUp to={1000} bottomText="Contributions" topText="GitHub" />
+            <CountUp to={50} topText="Projects" bottomText="Completed"  />
+            <CountUp to={20} topText="Happy" bottomText="Clients"  />
+            <CountUp to={1000} topText="GitHub" bottomText="Contributions"  />
           </div>
         </div>
         <div className="flex flex-col gap-4 w-1/2">
