@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="flex gap-4">
         <div className="flex gap-4">
           <a
-            href="/"
+            href="#"
             title="Discord"
             className="bg-gray-700 hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
           >
@@ -37,7 +37,7 @@ const Navbar = () => {
             <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125 hover:text-black" />
           </a>
           <a
-            href="/"
+            href="#"
             title="Signal Messenger"
             className="bg-gray-700 hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
           >
