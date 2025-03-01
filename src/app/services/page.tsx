@@ -12,10 +12,11 @@ import {
 import CountUp from "@/app/services/CountUp";
 import { details } from "@/data/details";
 import { services } from "@/data/services";
+import { motion } from "framer-motion";
 
 const CarouselPlugin = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 3500, stopOnInteraction: false})
+    Autoplay({ delay: 3500, stopOnInteraction: false })
   );
 
   const [activeSection, setActiveSection] =
@@ -24,9 +25,23 @@ const CarouselPlugin = () => {
   return (
     <div className="h-screen items-center flex flex-col justify-center w-full max-w-4xl mx-auto gap-6">
       <div>
-        <h1 className="text-4xl font-bold mt-20">How do I help?</h1>
+        <motion.h1
+          initial={{ y: -200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 3,
+            delay: 1,
+            type: "spring",
+            stiffness: 100,
+            damping: 5,
+            mass: 1,
+          }}
+          className="text-4xl font-bold mt-20"
+        >
+          How do I help?
+        </motion.h1>
       </div>
-      <div className="flex justify-between gap-16">
+      <motion.div initial={{y: 200, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 1, delay: 1}} className="flex justify-between gap-16">
         <div className="flex flex-col gap-2">
           <Carousel
             plugins={[plugin.current]}
@@ -61,9 +76,9 @@ const CarouselPlugin = () => {
             <CarouselNext />
           </Carousel>
           <div className="flex gap-8 text-center justify-center">
-            <CountUp to={50} topText="Projects" bottomText="Completed"  />
-            <CountUp to={20} topText="Happy" bottomText="Clients"  />
-            <CountUp to={1000} topText="GitHub" bottomText="Contributions"  />
+            <CountUp to={50} topText="Projects" bottomText="Completed" />
+            <CountUp to={20} topText="Happy" bottomText="Clients" />
+            <CountUp to={1000} topText="GitHub" bottomText="Contributions" />
           </div>
         </div>
         <div className="flex flex-col gap-4 w-1/2">
@@ -84,7 +99,7 @@ const CarouselPlugin = () => {
             {details[activeSection]}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
