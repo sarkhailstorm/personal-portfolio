@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ProjectsPage = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center gap-11 overflow-x-hidden">
+    <div className="h-screen flex flex-col items-center justify-center gap-12 overflow-x-hidden">
       <div>
         <motion.h1
           initial={{ y: -200, opacity: 0 }}
