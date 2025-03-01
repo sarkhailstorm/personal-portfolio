@@ -41,7 +41,12 @@ const ServicesPage = () => {
           How do I help?
         </motion.h1>
       </div>
-      <motion.div initial={{y: 200, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 1, delay: 1}} className="flex justify-between gap-16">
+      <motion.div
+        initial={{ y: 200, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="flex justify-between gap-16"
+      >
         <div className="flex flex-col gap-2">
           <Carousel
             plugins={[plugin.current]}
