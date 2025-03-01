@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import CountUp from "@/app/services/CountUp";
 
 const details: Record<string, React.ReactNode> = {
   internship: (
@@ -60,12 +61,6 @@ const details: Record<string, React.ReactNode> = {
     </div>
   ),
 };
-
-const stats = [
-  { value: 50, label: (<p>Projects <br /> Completed</p>) },
-  { value: 20, label: (<p>Satisfied <br /> Clients</p>) },
-  { value: 3, label: (<p>Years of <br /> Experience</p>)},
-];
 
 const services = [
   {
@@ -143,14 +138,9 @@ const CarouselPlugin = () => {
             <CarouselNext />
           </Carousel>
           <div className="flex gap-8 text-center justify-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col gap-1">
-                <h2 className="text-3xl font-bold">{stat.value}+</h2>
-                <div className="text-sm">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+            <CountUp to={50} bottomText="Completed" topText="Projects"/>
+            <CountUp to={20} bottomText="Clients" topText="Happy"/>
+            <CountUp to={1000} bottomText="Contributions" topText="GitHub"/>
           </div>
         </div>
         <div className="flex flex-col gap-4 w-1/2">
