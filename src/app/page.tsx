@@ -28,7 +28,7 @@ const HomePage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 1 }}
         >
-          Hiya, I'm<span className="text-[#ff004f]"> Sarkhail</span>
+          Hiya, I&apos;m<span className="text-[#ff004f]"> Sarkhail</span>
         </motion.h1>
         <motion.span
           className="text-3xl text-blue-300 font-semibold"
@@ -57,7 +57,7 @@ const HomePage = () => {
         >
           Committed Software Developer with a strong passion for building cool
           and functional software. Obsessed with security, always hunting for
-          vulnerabilities. I'm always excited to learn new things along the way.
+          vulnerabilities. I&apos;m always excited to learn new things along the way.
         </motion.p>
         <motion.div
           className="pt-2"
