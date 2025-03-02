@@ -46,16 +46,11 @@ const SideBar = () => {
 
   return (
     <>
-      <div
-        className="fixed top-5 right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <IoCloseSharp /> : <AiOutlineMenuFold />}
+      <div className="fixed top-5 right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <IoCloseSharp/> : <AiOutlineMenuFold /> }
       </div>
       <motion.nav
-        className={`fixed right-0 flex flex-col gap-4 justify-center items-end h-screen p-4 z-50 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed right-0 flex flex-col gap-4 justify-center items-end h-screen p-4 z-50`}
         variants={containerVariants}
         initial="hidden"
         animate="show"
