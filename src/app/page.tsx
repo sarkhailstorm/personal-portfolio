@@ -34,7 +34,7 @@ const HomePage = () => {
 
   return (
     <motion.div
-      className="h-screen flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
+      className="h-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
       initial="hidden"
       animate="visible"
     >
@@ -46,11 +46,11 @@ const HomePage = () => {
           src="boy.png"
           alt="Portfolio"
           animate={
-            screenSize === "desktop" ? { scale: [1, 1.1, 1] } : { scale: [1, 1, 1] }
+            screenSize === "desktop" ? { scale: [1, 1.1, 1] } : {}
           }
-          transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+          transition={screenSize === "desktop" ? { duration: 5, repeat: Infinity, ease: "linear" } : {}}
         />
-        <div className="absolute bottom-[-35] left-0 w-full h-20 bg-black blur-lg"></div>
+        {/* <div className="absolute bottom-[-35] left-0 w-full h-20 bg-black blur-lg"></div> */}
       </motion.div>
 
       <div className="flex flex-col md:gap-2 gap-4">
