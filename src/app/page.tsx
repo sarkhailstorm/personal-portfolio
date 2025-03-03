@@ -46,7 +46,7 @@ const HomePage = () => {
           src="boy.png"
           alt="Portfolio"
           animate={
-            screenSize === "desktop" ? { scale: [1, 1.1, 1] } : { scale: 1 }
+            screenSize === "desktop" ? { scale: [1, 1.1, 1] } : { scale: [1, 1, 1] }
           }
           transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
         />
