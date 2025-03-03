@@ -2,6 +2,7 @@
 import { ReactTyped } from "react-typed";
 import { MdOutlineReadMore } from "react-icons/md";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const fadeInLeft = {
   hidden: { opacity: 0, x: -200 },
@@ -19,29 +20,49 @@ const fadeInUp = {
 };
 
 const HomePage = () => {
+  const [screenSize, setScreenSize] = useState("desktop");
+
+  useEffect(() => {
+    const updateSize = () => {
+      setScreenSize(window.innerWidth < 500 ? "mobile" : "desktop");
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <motion.div
-      className="h-screen flex items-center justify-center gap-4"
+      className="h-screen flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
       initial="hidden"
       animate="visible"
     >
-      <motion.div className="w-[100%]" variants={fadeInLeft}>
+      <motion.div
+        className="md:w-[100%] w-[80%] border-2 rounded-[1.5rem] md:border-0 border-blue-500 mt-8 md:mt-0"
+        variants={fadeInLeft}
+      >
         <motion.img
           src="boy.png"
           alt="Portfolio"
-          animate={{ scale: [1, 1.1, 1] }}
+          animate={
+            screenSize === "desktop" ? { scale: [1, 1.1, 1] } : { scale: 1 }
+          }
           transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
         />
         <div className="absolute bottom-[-35] left-0 w-full h-20 bg-black blur-lg"></div>
       </motion.div>
 
-      <div className="flex flex-col gap-2">
-        <motion.h1 className="text-5xl font-bold" variants={fadeInLeft}>
+      <div className="flex flex-col md:gap-2 gap-4">
+        <motion.h1
+          className="md:text-5xl text-4xl text-center md:text-start font-bold"
+          variants={fadeInLeft}
+        >
           Hiya, I&apos;m <span className="text-[#ff004f]">Sarkhail</span>
         </motion.h1>
 
         <motion.span
-          className="text-3xl text-blue-300 font-semibold"
+          className="md:text-3xl md:text-start text-2xl text-center  text-blue-300 font-semibold"
           variants={fadeInRight}
         >
           <ReactTyped
@@ -58,21 +79,27 @@ const HomePage = () => {
           />
         </motion.span>
 
-        <motion.p className="w-[80%] pt-2 text-gray-300" variants={fadeInRight}>
+        <motion.p
+          className="md:w-[80%] pt-2 text-gray-300 w-[100%] md:text-start text-center md:px-0 px-4"
+          variants={fadeInRight}
+        >
           Committed Software Developer with a strong passion for building cool
           and functional software. Obsessed with security, always hunting for
           vulnerabilities. I&apos;m always excited to learn new things along the
           way.
         </motion.p>
 
-        <motion.div className="pt-2" variants={fadeInUp}>
+        <motion.div
+          className="pt-2 flex justify-center md:justify-start"
+          variants={fadeInUp}
+        >
           <a
             href="cv.pdf"
             download
-            className="group flex items-center max-w-max p-1 rounded-xl bg-[#800020] transition-all duration-300 hover:gap-3"
+            className="group flex items-center max-w-max p-1 rounded-xl bg-[#800020] transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 md:hover:bg-[#800020] hover:bg-blue-500"
           >
             <MdOutlineReadMore className="text-4xl transition-transform duration-300" />
-            <span className="overflow-hidden w-0 opacity-0 whitespace-nowrap group-hover:w-[8rem] group-hover:opacity-100 transition-all duration-300 ease-in-out">
+            <span className="overflow-hidden md:w-0 md:opacity-0 whitespace-nowrap md:group-hover:w-[8rem] w-32 group-hover:opacity-100 transition-all duration-300 ease-in-out">
               Download CV
             </span>
           </a>

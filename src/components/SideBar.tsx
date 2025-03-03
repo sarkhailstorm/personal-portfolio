@@ -53,7 +53,7 @@ const SideBar = () => {
         {isOpen ? <IoCloseSharp /> : <AiOutlineMenuFold />}
       </div>
       <motion.nav
-        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-800 md:left-auto mt-20 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-4 z-40 ${
+        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-800 md:left-auto mt-20 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:translate-x-0`}
         variants={containerVariants}
