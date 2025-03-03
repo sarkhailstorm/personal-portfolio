@@ -67,6 +67,7 @@ const SideBar = () => {
               className={`group relative flex items-center md:hover:gap-3 p-3 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
                 pathname === href ? "bg-blue-700" : "md:bg-[#800020]"
               }`}
+              onClick={() => setIsOpen(false)}
             >
               <motion.span className="overflow-hidden opacity-0 w-0 md:group-hover:w-[4.4rem] md:group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-md">
                 {label}
