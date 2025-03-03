@@ -17,7 +17,7 @@ const ProjectsPage = () => {
             damping: 8,
             mass: 1,
           }}
-          className="md:text-4xl text-[1.7rem] font-bold tracking-wider mt-32"
+          className="md:text-4xl text-[1.7rem] font-bold tracking-wider md:mt-20"
         >
           Take a look at my work
         </motion.h1>
