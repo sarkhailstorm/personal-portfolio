@@ -23,7 +23,7 @@ const ServicesPage = () => {
     useState<keyof typeof details>("internship");
 
   return (
-    <div className="h-screen overflow-hidden items-center flex flex-col justify-center w-full max-w-4xl mx-auto gap-6">
+    <div className="h-screen items-center flex flex-col justify-center w-full max-w-4xl mx-auto gap-6">
       <div>
         <motion.h1
           initial={{ y: -200, opacity: 0 }}
@@ -45,9 +45,9 @@ const ServicesPage = () => {
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="flex justify-between gap-16"
+        className="flex flex-col md:flex-row md:justify-between md:gap-16 gap-6"
       >
-        <div className="flex flex-col gap-2">
+        <div className="flex items-center md:items-start flex-col gap-2">
           <Carousel
             plugins={[plugin.current]}
             className="w-full max-w-xs"
@@ -59,7 +59,7 @@ const ServicesPage = () => {
                 <CarouselItem key={index}>
                   <div className="p-1">
                     <Card>
-                      <CardContent className="flex flex-col gap-4 aspect-square p-6">
+                      <CardContent className="flex flex-col gap-2 aspect-square p-6">
                         <div>
                           <img
                             src={service.img}
@@ -86,7 +86,7 @@ const ServicesPage = () => {
             <CountUp to={1000} topText="GitHub" bottomText="Contributions" />
           </div>
         </div>
-        <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col gap-4 md:w-1/2 md:items-start items-center">
           <nav className="flex gap-4">
             {Object.keys(details).map((key) => (
               <div
@@ -100,7 +100,7 @@ const ServicesPage = () => {
               </div>
             ))}
           </nav>
-          <div className="p-4 border w-[90%] h-[66%] rounded-md">
+          <div className="p-4 border md:w-[90%] md:h-[66%] h-[85%] w-[80%] rounded-md">
             {details[activeSection]}
           </div>
         </div>
