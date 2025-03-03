@@ -46,11 +46,16 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="fixed top-5 right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <IoCloseSharp/> : <AiOutlineMenuFold /> }
+      <div
+        className="fixed top-5 right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <IoCloseSharp /> : <AiOutlineMenuFold />}
       </div>
       <motion.nav
-        className={`fixed right-0 flex flex-col gap-4 justify-center items-end h-screen p-4 z-50`}
+        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-800 md:left-auto mt-20 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-4 z-40 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } md:translate-x-0`}
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -59,11 +64,11 @@ const SideBar = () => {
           <motion.div key={href} variants={childVariants}>
             <Link
               href={href}
-              className={`group relative flex items-center hover:gap-3 p-3 rounded-full transition-all duration-300 ease-in-out hover:pl-5 ${
-                pathname === href ? "bg-blue-700" : "bg-[#800020]"
+              className={`group relative flex items-center md:hover:gap-3 p-3 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
+                pathname === href ? "bg-blue-700" : "md:bg-[#800020]"
               }`}
             >
-              <motion.span className="overflow-hidden opacity-0 w-0 group-hover:w-[4.4rem] group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-md">
+              <motion.span className="overflow-hidden opacity-0 w-0 md:group-hover:w-[4.4rem] md:group-hover:opacity-100 transition-all duration-300 ease-in-out text-white text-md">
                 {label}
               </motion.span>
               <motion.span className="text-white text-3xl transition-transform duration-300">

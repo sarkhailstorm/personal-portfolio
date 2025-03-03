@@ -13,7 +13,7 @@ const Navbar = () => {
       initial={{ y: -50 }}
       animate={{ y: 0 }}
       transition={{ duration: 1, delay: 1 }}
-      className="fixed left-0 p-4 flex items-center justify-between w-full px-24 py-4"
+      className="fixed left-0 p-4 hidden md:flex items-center justify-between w-full px-24 py-4"
     >
       <div className="flex justify-center items-center">
         <img src="/controller.png" alt="Logo" className="w-14 h-14" />
