@@ -16,7 +16,7 @@ const Navbar = () => {
       className="fixed left-0 p-4 hidden md:flex items-center justify-between w-full px-24 py-4"
     >
       <div className="flex justify-center items-center">
-        <img src="/controller.png" alt="Logo" className="w-14 h-14" />
+        <img src="/letter-s.png" alt="Logo" className="w-14 h-14" />
       </div>
       <div className="flex gap-4">
         <div className="flex gap-4">

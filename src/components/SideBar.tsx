@@ -11,11 +11,12 @@ import { AiOutlineMenuFold } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { IoMdSettings } from "react-icons/io";
 
 const navLinks = [
   { href: "/", label: "Home", icon: <IoHome /> },
   { href: "/services", label: "Services", icon: <IoPerson /> },
-  { href: "/skills", label: "Skills", icon: <FaTools /> },
+  { href: "/skills", label: "Skills", icon: <IoMdSettings /> },
   { href: "/projects", label: "Projects", icon: <FaFolderOpen /> },
   { href: "/contact", label: "Contact", icon: <FaEnvelope /> },
 ];
