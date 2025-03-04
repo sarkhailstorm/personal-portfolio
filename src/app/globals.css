@@ -86,3 +86,10 @@
     rgba(0, 0, 0, 0) 100%
   );
 }
+
+
+@media (max-width: 424px) {
+  .marquee-container {
+    width: 100%;
+  }
+}

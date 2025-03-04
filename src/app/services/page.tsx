@@ -16,14 +16,14 @@ import { motion } from "framer-motion";
 
 const ServicesPage = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false})
+    Autoplay({ delay: 3000, stopOnInteraction: false })
   );
 
   const [activeSection, setActiveSection] =
     useState<keyof typeof details>("internship");
 
   return (
-    <div className="h-screen items-center flex flex-col justify-center w-full max-w-4xl mx-auto gap-6">
+    <div className="h-screen overflow-hidden md:overflow-visible items-center flex flex-col justify-center w-full max-w-4xl mx-auto md:gap-6 gap-20">
       <div>
         <motion.h1
           initial={{ y: -200, opacity: 0 }}
@@ -36,7 +36,7 @@ const ServicesPage = () => {
             damping: 5,
             mass: 1,
           }}
-          className="text-4xl font-bold mt-20"
+          className="text-4xl font-bold md:mt-20"
         >
           How do I help?
         </motion.h1>
@@ -86,7 +86,7 @@ const ServicesPage = () => {
             <CountUp to={1000} topText="GitHub" bottomText="Contributions" />
           </div>
         </div>
-        <div className="flex flex-col gap-4 md:w-1/2 md:items-start items-center">
+        <div className="md:flex flex-col gap-4 md:w-1/2 md:items-start items-center hidden">
           <nav className="flex gap-4">
             {Object.keys(details).map((key) => (
               <div

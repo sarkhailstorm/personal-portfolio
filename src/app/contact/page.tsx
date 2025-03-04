@@ -50,10 +50,10 @@ const ContactPage = () => {
       initial={{ y: 200, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 1 }}
-      className="flex flex-col gap-4 justify-center items-center h-screen"
+      className="flex flex-col md:gap-4 gap-20 justify-center items-center h-screen"
     >
       <motion.h1
-        className="font-bold text-3xl text-white mt-20"
+        className="font-bold text-3xl text-white md:mt-20 md:block hidden"
         initial={{ y: -200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -67,8 +67,47 @@ const ContactPage = () => {
       >
         Got something cool in mind? Let&apos;s connect!
       </motion.h1>
+      <div className="md:hidden flex flex-col gap-4">
+        <motion.h1
+          className="text-[1.8rem] text-center font-bold"
+          initial={{ y: -200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 3,
+            delay: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 8,
+            mass: 1,
+          }}
+        >
+          {" "}
+          Got something in mind?
+        </motion.h1>
+        <motion.div
+          className="text-center"
+          initial={{ y: -200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 3,
+            delay: 3,
+            type: "spring",
+            stiffness: 100,
+            damping: 8,
+            mass: 1,
+          }}
+        >
+          <motion.span className="text-2xl font-bold text-blue-400">
+            Let&apos;s connect!
+          </motion.span>
+        </motion.div>
+      </div>
+
       <div className="flex gap-4 justify-evenly items-center mx-auto w-full">
-        <form onSubmit={handleSubmit} className="flex flex-col w-[30%] gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col md:w-[30%] w-[80%] md:gap-4 gap-6"
+        >
           <div className="flex flex-col gap-1">
             <Label htmlFor="name" className="text-[16px]">
               Name
@@ -125,7 +164,7 @@ const ContactPage = () => {
             {isLoading ? status : "Send"}
           </Button>
         </form>
-        <div className="mt-8 w-[27%]">
+        <div className="mt-8 w-[27%] hidden md:flex">
           <ContactSvg />
         </div>
       </div>

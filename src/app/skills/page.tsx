@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -7,59 +7,24 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
-
-const upperMarquee = [
-  "/HTML.svg",
-  "/CSS.svg",
-  "/JavaScript.svg",
-  "/TypeScript.svg",
-  "/Python.svg",
-  "/Java.svg",
-  "/C.svg",
-  "/C++.svg",
-  "/React.svg",
-  "/Three.js.svg",
-  "/Bootstrap.svg",
-  "/Tailwind CSS.svg",
-  "/HTML.svg",
-  "/CSS.svg",
-  "/JavaScript.svg",
-  "/TypeScript.svg",
-  "/Python.svg",
-  "/Java.svg",
-  "/C.svg",
-  "/C++.svg",
-  "/React.svg",
-  "/Three.js.svg",
-  "/Bootstrap.svg",
-  "/Tailwind CSS.svg",
-];
-
-const lowerMarquee = [
-  "/Figma.svg",
-  "/Next.js.svg",
-  "/Node.js.svg",
-  "/Express.svg",
-  "/PostgreSQL.svg",
-  "/MongoDB.svg",
-  "/Git.svg",
-  "/Docker.svg",
-  "/Linux.svg",
-  "/Figma.svg",
-  "/Next.js.svg",
-  "/Node.js.svg",
-  "/Express.svg",
-  "/PostgreSQL.svg",
-  "/MongoDB.svg",
-  "/Git.svg",
-  "/Docker.svg",
-  "/Linux.svg",
-];
+import { upperMarquee } from "@/data/marquee";
+import { lowerMarquee } from "@/data/marquee";
 
 const SkillsPage = () => {
+  const [screenSize, setScreenSize] = useState("desktop");
+
+  useEffect(() => {
+    const updateSize = () => {
+      setScreenSize(window.innerWidth < 500 ? "mobile" : "desktop");
+    };
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <TooltipProvider>
-      <div className="flex flex-col h-screen gap-16 pt-28">
+      <div className="flex flex-col h-screen md:gap-16 gap-28 md:pt-28 pt-40">
         <div className="flex flex-col items-center gap-4">
           <motion.h1
             initial={{ y: -200, opacity: 0 }}
@@ -72,7 +37,7 @@ const SkillsPage = () => {
               damping: 5,
               mass: 1,
             }}
-            className="text-4xl font-bold"
+            className="md:text-4xl text-[1.8rem] font-bold"
           >
             Curious about my skills?
           </motion.h1>
@@ -98,10 +63,14 @@ const SkillsPage = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 4 }}
         >
-          <div className="container mx-auto marquee-container p-4 rounded-2xl flex flex-col gap-8 overflow-x-hidden">
+          <div className="container md:mx-auto marquee-container p-4 rounded-2xl flex flex-col gap-8 overflow-x-hidden">
             <motion.div
               className="flex gap-12"
-              animate={{ x: ["0%", "-200%"] }}
+              animate={
+                screenSize === "desktop"
+                  ? { x: ["0%", "-200%"] }
+                  : { x: ["0%", "-354%"] }
+              }
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             >
               {[...upperMarquee, ...upperMarquee].map((skill, index) => (
@@ -124,7 +93,11 @@ const SkillsPage = () => {
             <div className="border-2 border-gray-800"></div>
             <motion.div
               className="flex gap-12"
-              animate={{ x: ["-150%", "0"] }}
+              animate={
+                screenSize === "desktop"
+                  ? { x: ["-150%", "0"] }
+                  : { x: ["-265%", "0"] }
+              }
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             >
               {[...lowerMarquee, ...lowerMarquee].map((skill, index) => (
