@@ -46,14 +46,19 @@ const SideBar = () => {
 
   return (
     <>
-      <div
-        className="fixed top-5 right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <IoCloseSharp /> : <AiOutlineMenuFold />}
+      <div className="fixed flex items-center px-6 bg-[#040404] border-b-2 border-red-700 h-[8%] top-0 right-0 left-0 md:hidden">
+        <div
+          className="fixed top-[5px] right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <IoCloseSharp /> : <AiOutlineMenuFold />}
+        </div>
+        <div>
+          <img src="letter-s.png" alt="Logo" className="w-8 h-8" />
+        </div>
       </div>
       <motion.nav
-        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-950 md:left-auto mt-20 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
+        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-950 md:left-auto mt-16 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:translate-x-0`}
         variants={containerVariants}
@@ -64,8 +69,8 @@ const SideBar = () => {
           <motion.div key={href} variants={childVariants}>
             <Link
               href={href}
-              className={`group relative flex items-center md:hover:gap-3 px-3 py-2 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
-                pathname === href ? "md:bg-blue-700 bg-transparent" : "md:bg-[#800020]"
+              className={`group relative flex items-center md:hover:gap-3 px-3 py-2 md:p-3 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
+                pathname === href ? "md:bg-blue-700 bg-none" : "md:bg-[#800020]"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -74,7 +79,9 @@ const SideBar = () => {
               </motion.span>
               <motion.span
                 className={`text-3xl transition-transform duration-300 ${
-                  pathname === href ? "text-red-600 md:text-white" : "text-white"
+                  pathname === href
+                    ? "text-red-600 md:text-white"
+                    : "text-white"
                 }`}
               >
                 {icon}
