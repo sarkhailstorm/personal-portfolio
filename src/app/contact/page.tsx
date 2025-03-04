@@ -113,7 +113,7 @@ const ContactPage = () => {
               Name
             </Label>
             <Input
-              className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
+              className="lg:py-5 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
               required
               type="text"
               id="name"
@@ -128,7 +128,7 @@ const ContactPage = () => {
               Email
             </Label>
             <Input
-              className="lg:py-5 lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
+              className="lg:py-5 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
               required
               type="email"
               id="email"
