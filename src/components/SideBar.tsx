@@ -1,25 +1,12 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { IoHome } from "react-icons/io5";
-import { IoPerson } from "react-icons/io5";
-import { FaTools } from "react-icons/fa";
-import { FaFolderOpen } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { IoMdSettings } from "react-icons/io";
-
-const navLinks = [
-  { href: "/", label: "Home", icon: <IoHome /> },
-  { href: "/services", label: "Services", icon: <IoPerson /> },
-  { href: "/skills", label: "Skills", icon: <IoMdSettings /> },
-  { href: "/projects", label: "Projects", icon: <FaFolderOpen /> },
-  { href: "/contact", label: "Contact", icon: <FaEnvelope /> },
-];
+import { navLinks } from "@/data/navlinks";
 
 const containerVariants = {
   hidden: { opacity: 0 },
