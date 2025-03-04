@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home", icon: <IoHome /> },
@@ -46,15 +47,23 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="fixed flex items-center px-6 bg-[#040404] border-b-2 border-red-700 h-[8%] top-0 right-0 left-0 md:hidden">
+      <div className="fixed flex items-center px-8 bg-[#040404] border-b-2 border-red-700 h-[8%] right-0 left-0 md:hidden">
         <div
-          className="fixed top-[5px] right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden"
+          className="fixed right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <IoCloseSharp /> : <AiOutlineMenuFold />}
         </div>
         <div>
-          <img src="letter-s.png" alt="Logo" className="w-8 h-8" />
+          <Link href="/">
+            <Image
+              src="/letter-s.png"
+              alt="Logo"
+              width={32}
+              height={32}
+              priority
+            />
+          </Link>
         </div>
       </div>
       <motion.nav
