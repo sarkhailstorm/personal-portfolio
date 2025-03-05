@@ -23,7 +23,7 @@ const ServicesPage = () => {
     useState<keyof typeof details>("internship");
 
   return (
-    <div className="h-screen overflow-hidden md:overflow-visible items-center flex flex-col justify-center w-full max-w-4xl mx-auto md:gap-6 gap-20">
+    <div className="h-screen overflow-hidden md:overflow-visible items-center flex flex-col md:justify-center w-full max-w-4xl mx-auto md:gap-6 gap-20 pt-40 md:pt-0">
       <div>
         <motion.h1
           initial={{ y: -200, opacity: 0 }}

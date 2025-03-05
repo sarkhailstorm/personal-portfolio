@@ -54,7 +54,7 @@ const SkillsPage = () => {
             }}
             className="text-2xl font-semibold text-blue-400"
           >
-            Alright, let me fill you in...
+            Let me fill you in!
           </motion.h2>
         </div>
         <motion.div
