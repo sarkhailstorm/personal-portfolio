@@ -106,14 +106,14 @@ const ContactPage = () => {
       <div className="flex gap-4 justify-evenly items-center mx-auto w-full">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col md:w-[30%] w-[90%] md:gap-4 gap-6  p-6 rounded-xl bg-[#020202] shadow-sm shadow-[#0c0c19]"
+          className="flex flex-col md:w-[30%] w-[90%] md:gap-4 gap-6"
         >
           <div className="flex flex-col gap-1">
             <Label htmlFor="name" className="text-[16px]">
               Name
             </Label>
             <Input
-              className="lg:py-5 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
+              className="lg:py-6 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
               required
               type="text"
               id="name"
@@ -128,7 +128,7 @@ const ContactPage = () => {
               Email
             </Label>
             <Input
-              className="lg:py-5 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
+              className="lg:py-6 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
               required
               type="email"
               id="email"
