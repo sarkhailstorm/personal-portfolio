@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaSignalMessenger } from "react-icons/fa6";
 import { ModeToggle } from "./ModeToggle";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   return (
@@ -23,7 +24,8 @@ const Navbar = () => {
           <a
             href="#"
             title="Discord"
-            className="bg-gray-700 hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+            className="bg-gray-900 hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+            onClick={(e) => {if (e.currentTarget.getAttribute("href") === "#") {e.preventDefault(); toast.error("Discord is currently unavailable!")}}}
           >
             <FaDiscord className="text-2xl ease-in-out duration-300 hover:scale-125" />
           </a>
@@ -32,14 +34,15 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Github"
-            className="bg-gray-700 hover:bg-blue-100 ease-in-out duration-300 text-white hover:text-black rounded-full w-[39px] h-[39px] flex justify-center items-center"
+            className="bg-gray-900 hover:bg-blue-100 ease-in-out duration-300 text-white hover:text-black rounded-full w-[39px] h-[39px] flex justify-center items-center"
           >
             <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125 hover:text-black" />
           </a>
           <a
             href="#"
             title="Signal Messenger"
-            className="bg-gray-700 hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+            className="bg-gray-900 hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+            onClick={(e) => {if (e.currentTarget.getAttribute("href") === "#") {e.preventDefault(); toast.error("Signal is currently unavailable!")}}}
           >
             <FaSignalMessenger className="text-xl ease-in-out duration-300 hover:scale-125" />
           </a>
