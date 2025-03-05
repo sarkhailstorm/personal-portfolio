@@ -106,7 +106,7 @@ const ContactPage = () => {
       <div className="flex gap-4 justify-evenly items-center mx-auto w-full">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col md:w-[30%] w-[80%] md:gap-4 gap-6"
+          className="flex flex-col md:w-[30%] w-[90%] md:gap-4 gap-6  p-6 rounded-xl bg-[#020202] shadow-sm shadow-[#0c0c19]"
         >
           <div className="flex flex-col gap-1">
             <Label htmlFor="name" className="text-[16px]">
