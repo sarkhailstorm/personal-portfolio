@@ -67,7 +67,7 @@ const ContactPage = () => {
       >
         Got something cool in mind? Let&apos;s connect!
       </motion.h1>
-      <div className="md:hidden flex flex-col gap-4">
+      <div className="md:hidden flex flex-col gap-4 mt-6">
         <motion.h1
           className="text-[1.8rem] text-center font-bold"
           initial={{ y: -200, opacity: 0 }}
