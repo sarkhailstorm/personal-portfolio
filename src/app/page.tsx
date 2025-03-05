@@ -67,11 +67,12 @@ const HomePage = () => {
         >
           <ReactTyped
             strings={[
-              "Software Engineer",
               "Web Developer",
+              "Software Engineer",
               "Frontend Expert",
               "Backend Engineer",
-              "Open-Source Contributor",
+              "Open-Source Contributer",
+              "Security Aficionado",
             ]}
             typeSpeed={50}
             backSpeed={30}
