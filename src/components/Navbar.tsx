@@ -16,9 +16,9 @@ const Navbar = () => {
       transition={{ duration: 1, delay: 1 }}
       className="fixed left-0 p-4 md:flex hidden items-center justify-between w-full px-24 py-4"
     >
-      <div className="flex justify-center items-center">
+      <Link href="/" className="flex justify-center items-center">
         <img src="/letter-s.png" alt="Logo" className="w-14 h-14" />
-      </div>
+      </Link>
       <div className="flex gap-4">
         <div className="flex gap-4">
           <a
