@@ -1,6 +1,6 @@
 export const projects = [
   {
-    img: "Portfolio.png",
+    img: "Animated Portfolio.png",
     title: "Portfolio Website",
     desc: "An animated Portfolio Website built with Next.js, TypeScript, Tailwind CSS, Framer Motion, ShadCN, and DaisyUI.",
     link: "https://my-animated-personal-portfolio-website.vercel.app",

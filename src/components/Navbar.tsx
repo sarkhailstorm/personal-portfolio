@@ -14,7 +14,7 @@ const Navbar = () => {
       initial={{ y: -50 }}
       animate={{ y: 0 }}
       transition={{ duration: 1, delay: 1 }}
-      className="fixed left-0 p-4 hidden md:flex items-center justify-between w-full px-24 py-4"
+      className="fixed left-0 p-4 flex items-center justify-between w-full px-24 py-4"
     >
       <div className="flex justify-center items-center">
         <img src="/letter-s.png" alt="Logo" className="w-14 h-14" />
@@ -58,7 +58,7 @@ const Navbar = () => {
           </a>
           <ModeToggle />
         </div>
-        <div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-blue-700 hover:scale-110 ease-in-out duration-300 cursor-pointer">
+        <div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-blue-700 hover:scale-110 ease-in-out duration-300 cursor-pointer md:block hidden">
           <Link href="/contact">Hire Me</Link>
         </div>
       </div>

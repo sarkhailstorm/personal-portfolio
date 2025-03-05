@@ -3,6 +3,7 @@ import { ReactTyped } from "react-typed";
 import { MdOutlineReadMore } from "react-icons/md";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { HiOutlineDownload } from "react-icons/hi";
 
 const fadeInLeft = {
   hidden: { opacity: 0, x: -200 },
@@ -45,10 +46,12 @@ const HomePage = () => {
         <motion.img
           src="boy.png"
           alt="Portfolio"
-          animate={
-            screenSize === "desktop" ? { scale: [1, 1.1, 1] } : {}
+          animate={screenSize === "desktop" ? { scale: [1, 1.1, 1] } : {}}
+          transition={
+            screenSize === "desktop"
+              ? { duration: 5, repeat: Infinity, ease: "linear" }
+              : {}
           }
-          transition={screenSize === "desktop" ? { duration: 5, repeat: Infinity, ease: "linear" } : {}}
         />
         {/* <div className="absolute bottom-[-35] left-0 w-full h-20 bg-black blur-lg"></div> */}
       </motion.div>
@@ -99,7 +102,11 @@ const HomePage = () => {
             download
             className="group flex items-center max-w-max p-1 rounded-xl bg-[#800020] transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 md:hover:bg-[#800020] hover:bg-blue-600"
           >
-            <MdOutlineReadMore className="text-4xl transition-transform duration-300" />
+            {screenSize === "desktop" ? (
+              <MdOutlineReadMore className="text-4xl transition-transform duration-300" />
+            ) : (
+              <HiOutlineDownload className="text-4xl py-1" />
+            )}
             <span className="overflow-hidden md:w-0 md:opacity-0 whitespace-nowrap md:group-hover:w-[8rem] w-32 group-hover:opacity-100 transition-all duration-300 ease-in-out">
               Download CV
             </span>
