@@ -31,8 +31,8 @@ const Navbar = () => {
         transition={{ duration: 1, delay: 1 }}
         className={`fixed left-0 bottom-0 md:bottom-auto p-4 flex md:bg-transparent md:border-none border-2 border-t-red-600 bg-gray-950 items-center justify-between w-full px-24 py-4 z-40 ${
           isOpen
-            ? "translate-x-0 bottom-0 opacity-100 transform transition-all duration-300 ease-out"
-            : "translate-x-full bottom-[-32px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-300 ease-in"
+            ? "translate-x-0 bottom-0 opacity-100 transform transition-all duration-200 ease-out"
+            : "translate-x-full bottom-[-32px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-200 ease-in"
         } md:translate-x-0 md:opacity-100`}
       >
         <Link href="/" className="md:flex hidden justify-center items-center">
@@ -43,7 +43,7 @@ const Navbar = () => {
             <a
               href="#"
               title="Discord"
-              className="bg-[#09090B] hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+              className="bg-[#09090B] outline outline-1 outline-[#2c2c2c] hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
               onClick={(e) => {
                 if (e.currentTarget.getAttribute("href") === "#") {
                   e.preventDefault();
@@ -59,7 +59,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Github"
-              className="bg-[#09090B] hover:bg-blue-100 ease-in-out duration-300 text-white hover:text-black rounded-full w-[39px] h-[39px] flex justify-center items-center"
+              className="bg-[#09090B] outline outline-1 outline-[#2c2c2c] hover:bg-blue-100 ease-in-out duration-300 text-white hover:text-black rounded-full w-[39px] h-[39px] flex justify-center items-center"
               onClick={() => setIsOpen(false)}
             >
               <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125 hover:text-black" />
@@ -67,7 +67,7 @@ const Navbar = () => {
             <a
               href="#"
               title="Signal Messenger"
-              className="bg-[#09090B] hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+              className="bg-[#09090B] outline outline-1 outline-[#2c2c2c] hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
               onClick={(e) => {
                 if (e.currentTarget.getAttribute("href") === "#") {
                   e.preventDefault();
