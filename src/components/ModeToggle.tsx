@@ -36,7 +36,7 @@ export const ModeToggle: React.FC<ModeToggleProps> = ({ onClick }) => {
           onClick={(e) => {
             e.preventDefault();
             toast("This feature will be available soon!", { icon: "ℹ️" });
-            onClick && onClick();
+            if (onClick) onClick();
           }}
         >
           Light
@@ -44,7 +44,7 @@ export const ModeToggle: React.FC<ModeToggleProps> = ({ onClick }) => {
         <DropdownMenuItem
           onClick={() => {
             setTheme("dark");
-            onClick && onClick();
+            if (onClick) onClick();
           }}
         >
           Dark
@@ -53,7 +53,7 @@ export const ModeToggle: React.FC<ModeToggleProps> = ({ onClick }) => {
           onClick={(e) => {
             e.preventDefault();
             toast("This feature will be available soon!", { icon: "ℹ️" });
-            onClick && onClick();
+            if (onClick) onClick();
           }}
         >
           System
