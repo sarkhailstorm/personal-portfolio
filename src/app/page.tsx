@@ -35,7 +35,7 @@ const HomePage = () => {
 
   return (
     <motion.div
-      className="h-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
+      className="h-screen relative overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
       initial="hidden"
       animate="visible"
     >
@@ -46,10 +46,10 @@ const HomePage = () => {
         <motion.img
           src="boy.png"
           alt="Portfolio"
-          animate={screenSize === "desktop" ? { scale: [1, 1.1, 1] } : {}}
+          animate={screenSize === "desktop" ? { scale: [1, 1.05, 1] } : {}}
           transition={
             screenSize === "desktop"
-              ? { duration: 5, repeat: Infinity, ease: "linear" }
+              ? { duration: 3, repeat: Infinity, ease: "linear" }
               : {}
           }
         />
