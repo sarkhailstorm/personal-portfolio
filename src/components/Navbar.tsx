@@ -32,7 +32,7 @@ const Navbar = () => {
         className={`fixed left-0 bottom-0 md:bottom-auto p-4 flex md:bg-transparent md:border-none border-2 border-t-red-600 bg-gray-950 items-center justify-between w-full px-24 py-4 z-40 ${
           isOpen
             ? "translate-x-0 bottom-0 opacity-100 transform transition-all duration-300 ease-out"
-            : "translate-x-full -bottom-52 opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-300 ease-in"
+            : "translate-x-full bottom-[-32px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-300 ease-in"
         } md:translate-x-0 md:opacity-100`}
       >
         <Link href="/" className="md:flex hidden justify-center items-center">
