@@ -53,8 +53,8 @@ const HomePage = () => {
               : {}
           }
         />
-        <div className="absolute hidden md:block bottom-[-35px] left-0 w-full h-20 bg-black blur-lg"></div>
       </motion.div>
+      <div className="absolute hidden md:block bottom-0 left-0 w-full h-6 bg-black blur-sm"></div>
 
       <div className="flex flex-col md:gap-2 gap-4">
         <motion.h1
