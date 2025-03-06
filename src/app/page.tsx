@@ -35,7 +35,7 @@ const HomePage = () => {
 
   return (
     <motion.div
-      className="h-screen relative overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
+      className="h-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
       initial="hidden"
       animate="visible"
     >

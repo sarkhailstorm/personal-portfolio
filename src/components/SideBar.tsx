@@ -37,7 +37,7 @@ const SideBar = () => {
     <>
       <div className="fixed flex items-center px-8 bg-[#040404] border-b-2 border-red-700 h-[8%] right-0 left-0 md:hidden">
         <div
-          className="fixed right-5 z-50 p-3 cursor-pointer text-white text-3xl md:hidden"
+          className="fixed right-5 z-0 p-3 cursor-pointer text-white text-3xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <IoCloseSharp className="text-red-600" /> : <AiOutlineMenuFold />}
