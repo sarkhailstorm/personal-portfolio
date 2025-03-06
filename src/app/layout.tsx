@@ -13,8 +13,8 @@ const font = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Created by Sarkhail.",
+  title: "Sarkhail's Portfolio",
+  description: "A fully functional, responsive, and aesthetically pleasing modern animated portfolio website created by Sarkhail.",
 };
 
 export default function RootLayout({
@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/letter-s.png" />
+      </head>
       <body className={`${font.className} dark:bg-black text-white`}>
         <ThemeProvider
           attribute="class"
