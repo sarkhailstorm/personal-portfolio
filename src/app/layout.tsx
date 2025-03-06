@@ -6,6 +6,7 @@ import Loading from "./loading";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "react-hot-toast";
+import DisableInspect from "@/components/DisableInspect";
 
 const font = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -14,7 +15,8 @@ const font = Sora({
 
 export const metadata: Metadata = {
   title: "Sarkhail's Portfolio",
-  description: "A fully functional, responsive, and aesthetically pleasing modern animated portfolio website created by Sarkhail.",
+  description:
+    "A fully functional, responsive, and aesthetically pleasing modern animated portfolio website created by Sarkhail.",
 };
 
 export default function RootLayout({
@@ -34,6 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* <DisableInspect /> */}
           <Toaster position="top-center" />
           <Loading />
           <Navbar />
