@@ -43,7 +43,7 @@ const HomePage = () => {
         className="md:w-[43%] w-[80%] border-2 md:border-0 border-blue-500 mt-8 md:mt-0 
              md:rounded-none rounded-full overflow-hidden flex items-center justify-center md:cursor-auto cursor-pointer"
         variants={fadeInLeft}
-        whileHover={screenSize === "mobile" ? { borderColor: "#ff004f", rotate: 360 } : {}}
+        whileTap={screenSize === "mobile" ? { borderColor: "#ff004f", rotate: 360 } : {}}
         transition={screenSize === "mobile" ? { duration: 1.5, ease: "easeInOut" } : {}}
       >
         <motion.img
