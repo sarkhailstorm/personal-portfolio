@@ -35,17 +35,21 @@ const HomePage = () => {
 
   return (
     <motion.div
-      className="h-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4"
+      className="h-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4"
       initial="hidden"
       animate="visible"
     >
       <motion.div
-        className="md:w-[43%] w-[80%] border-2 rounded-[1.5rem] md:border-0 border-blue-500 mt-8 md:mt-0"
+        className="md:w-[43%] w-[80%] border-2 md:border-0 border-blue-500 mt-8 md:mt-0 
+             md:rounded-none rounded-full overflow-hidden flex items-center justify-center md:cursor-auto cursor-pointer"
         variants={fadeInLeft}
+        whileHover={screenSize === "mobile" ? { borderColor: "#ff004f", rotate: 360 } : {}}
+        transition={screenSize === "mobile" ? { duration: 1.5, ease: "easeInOut" } : {}}
       >
         <motion.img
           src="boy.png"
           alt="Portfolio"
+          className="w-full h-full object-cover"
           animate={screenSize === "desktop" ? { scale: [1, 1.05, 1] } : {}}
           transition={
             screenSize === "desktop"

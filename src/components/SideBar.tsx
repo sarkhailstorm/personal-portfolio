@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import { AiOutlineMenuFold } from "react-icons/ai";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -40,7 +40,9 @@ const SideBar = () => {
           className="fixed right-5 z-0 p-3 cursor-pointer text-white text-3xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <IoCloseSharp className="text-red-600" /> : <AiOutlineMenuFold />}
+          {isOpen ? <IoCloseSharp className="text-red-600" /> : <RxHamburgerMenu className="text-[2.2rem]" />
+
+          }
         </div>
         <div>
           <Link href="/">
