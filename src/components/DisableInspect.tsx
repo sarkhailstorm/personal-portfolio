@@ -1,13 +1,24 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 export default function DisableInspect() {
+  const [screenSize, setScreenSize] = useState("desktop");
+
   useEffect(() => {
+    const updateSize = () => {
+      setScreenSize(window.innerWidth < 500 ? "mobile" : "desktop");
+
+      updateSize();
+      window.addEventListener("resize", updateSize);
+      return () => window.removeEventListener("resize", updateSize);
+    };
     document.addEventListener("contextmenu", (e) => {
       e.preventDefault();
-      toast.error("Right-click is disabled!");
+      screenSize === "desktop"
+        ? toast.error("Inspection is not allowed!")
+        : null;
     });
 
     const disableInspect = (e: KeyboardEvent) => {
@@ -31,9 +42,8 @@ export default function DisableInspect() {
         toast.error("Console access is disabled!");
       } else if (e.ctrlKey && e.shiftKey && (e.key === "m" || e.key === "M")) {
         e.preventDefault();
-        toast.error("Responsive mode is restricted!")
+        toast.error("Responsive mode is restricted!");
       }
-
     };
 
     document.addEventListener("keydown", disableInspect);
