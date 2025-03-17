@@ -40,7 +40,7 @@ const HomePage = () => {
       animate="visible"
     >
       <motion.div
-        className="md:w-[100%] w-[80%] border-2 rounded-[1.5rem] md:border-0 border-blue-500 mt-8 md:mt-0"
+        className="md:w-[43%] w-[80%] border-2 rounded-[1.5rem] md:border-0 border-blue-500 mt-8 md:mt-0"
         variants={fadeInLeft}
       >
         <motion.img
@@ -56,7 +56,7 @@ const HomePage = () => {
       </motion.div>
       <div className="absolute hidden md:block bottom-0 left-0 w-full h-6 bg-black blur-sm"></div>
 
-      <div className="flex flex-col md:gap-2 gap-4">
+      <div className="flex flex-col md:w-1/2 md:gap-2 gap-4">
         <motion.h1
           className="md:text-5xl text-4xl text-center md:text-start font-bold"
           variants={fadeInLeft}
@@ -65,12 +65,12 @@ const HomePage = () => {
         </motion.h1>
 
         <motion.span
-          className="md:text-3xl md:text-start text-2xl text-center  text-blue-300 font-semibold"
+          className="md:text-3xl md:text-start text-2xl text-center text-blue-300 font-semibold"
           variants={fadeInRight}
         >
           <ReactTyped
             strings={[
-              "Web Developer",
+              "CS Graduate",
               "Software Engineer",
               "Frontend Expert",
               "Backend Engineer",
@@ -84,13 +84,13 @@ const HomePage = () => {
         </motion.span>
 
         <motion.p
-          className="md:w-[80%] pt-2 text-gray-300 w-[100%] md:text-start text-center md:px-0 px-4"
+          className="md:w-[85%] pt-2 text-gray-300 w-[100%] md:text-start text-center md:px-0 px-4"
           variants={fadeInRight}
         >
-          Committed Software Developer with a strong passion for building cool
-          and functional software. Obsessed with security, always hunting for
-          vulnerabilities. I&apos;m always excited to learn new things along the
-          way.
+          Software Developer who&apos;s all about building cool and functional
+          software. From Front-End magic to Back-End logic, I bring ideas to
+          life with clean and efficient code. I build apps with security in mind
+          so there are no nasty surprises.
         </motion.p>
 
         <motion.div
