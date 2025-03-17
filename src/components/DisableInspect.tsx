@@ -26,25 +26,25 @@ export default function DisableInspect() {
     const disableInspect = (e: KeyboardEvent) => {
       if (e.key === "F12") {
         e.preventDefault();
-        toast.error("🚫 Developer Tools are disabled!");
+        toast("🚫 Developer Tools are disabled!");
       } else if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
         e.preventDefault();
-        toast.error("🔒 Viewing source code is restricted!");
+        toast("🔒 Viewing source code is restricted!");
       } else if (e.ctrlKey && (e.key === "s" || e.key === "S")) {
         e.preventDefault();
-        toast.error("❗Saving is disabled!");
+        toast("❗Saving is disabled!");
       } else if (e.ctrlKey && (e.key === "c" || e.key === "C")) {
         e.preventDefault();
-        toast.error("❌ Copying is not allowed!");
+        toast.error("Copying is not allowed!");
       } else if (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) {
         e.preventDefault();
-        toast.error("🔎 Inspection is not allowed!");
+        toast.error("Inspection is not allowed!");
       } else if (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) {
         e.preventDefault();
-        toast.error("❗Console access is disabled!");
+        toast("Console access is disabled!");
       } else if (e.ctrlKey && e.shiftKey && (e.key === "m" || e.key === "M")) {
         e.preventDefault();
-        toast.error("📱 Responsive mode is restricted!");
+        toast.error("Responsive mode is restricted!");
       }
     };
 
