@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { AiOutlineUnorderedList } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -35,12 +35,12 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="fixed flex items-center px-8 bg-[#040404] border-b-2 border-red-700 h-[8%] right-0 left-0 md:hidden">
+      <div className="fixed flex items-center px-8 bg-[#040404] border-b-2 border-red-700 h-[10%] right-0 left-0 md:hidden">
         <div
           className="fixed right-5 z-0 p-3 cursor-pointer text-white text-3xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <IoCloseSharp className="text-red-600" /> : <RxHamburgerMenu className="text-[2.2rem]" />
+          {isOpen ? <IoCloseSharp className="text-red-600" /> : <AiOutlineUnorderedList className="text-[2.2rem]" />
 
           }
         </div>
@@ -57,7 +57,7 @@ const SideBar = () => {
         </div>
       </div>
       <motion.nav
-        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-950 md:left-auto mt-16 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
+        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-950 md:left-auto mt-20 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
           isOpen
             ? "translate-x-0 opacity-100 scale-100 transform transition-all duration-300 ease-out"
             : "translate-x-full opacity-0 scale-75 md:scale-100 transform transition-all duration-300 ease-in"

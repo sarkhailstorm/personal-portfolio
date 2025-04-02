@@ -102,7 +102,7 @@ const HomePage = () => {
           variants={fadeInUp}
         >
           <a
-            href="/CV.pdf"
+            href="/cv.pdf"
             download
             className="group flex items-center max-w-max p-1 rounded-xl bg-[#800020] transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 md:hover:bg-[#800020] hover:bg-blue-600"
           >
