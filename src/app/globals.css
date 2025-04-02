@@ -87,6 +87,11 @@
   );
 }
 
+@media (max-height: 875px) {
+  .marginTop {
+    margin-top: 5.5rem;
+  }
+}
 
 @media (max-width: 424px) {
   .marquee-container {
