@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
+import { LuSend } from "react-icons/lu";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -161,6 +162,7 @@ const ContactPage = () => {
                 : "bg-[#0262c9]"
             }`}
           >
+            <LuSend />
             {isLoading ? status : "Send"}
           </Button>
         </form>
