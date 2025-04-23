@@ -24,7 +24,7 @@ const SkillsPage = () => {
 
   return (
     <TooltipProvider>
-      <div className="flex flex-col h-screen md:gap-16 gap-28 md:pt-28 pt-40">
+      <div className="flex flex-col h-screen md:gap-16 gap-28 md:pt-28 pt-36">
         <div className="flex flex-col items-center gap-4">
           <motion.h1
             initial={{ y: -200, opacity: 0 }}
