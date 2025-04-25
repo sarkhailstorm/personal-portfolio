@@ -9,14 +9,13 @@ export const details: Record<string, React.ReactNode> = {
         alt="Apexure Logo"
         width={150}
         height={150}
-
       />
       <h1 className="font-bold text-xl">Web Developer Intern</h1>
       <p>
-        Worked as a Front-End Web Developer Intern at Apexure, where I built
-        aesthetically pleasing landing pages and wireframes using various tools
-        and technologies. Gained experience in a collaborative environment while
-        following best practices in software development.
+        During my front-end internship at Apexure, I built web interfaces and
+        interactive features for client projects using modern JavaScript.
+        Learned how professional teams ship products - from code reviews to
+        building interfaces that worked well and looked great.
       </p>
     </div>
   ),
@@ -41,7 +40,6 @@ export const details: Record<string, React.ReactNode> = {
         alt="Logo"
         width={150}
         height={150}
-
       />
       <p className="text-xl font-bold">CS Grad</p>
       <p>
