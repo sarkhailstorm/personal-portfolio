@@ -22,7 +22,7 @@ export const details: Record<string, React.ReactNode> = {
   ),
   experience: (
     <div className="flex flex-col gap-2">
-      <Image src="/Experience.png" alt="Logo" width={50} height={50} />
+      <Image src="/Experience.webp" alt="Logo" width={120} height={100} />
       <h1 className="font-bold text-xl">Software Developer</h1>
       <div className="flex flex-col gap-2">
         <p>
@@ -43,12 +43,11 @@ export const details: Record<string, React.ReactNode> = {
         height={150}
 
       />
-      <p className="text-xl font-bold">CS Graduate</p>
+      <p className="text-xl font-bold">CS Grad</p>
       <p>
         Graduated from Caset College of Computer Sciences with great grades.
         Gained a solid foundation in software development, web technologies, and
-        problem-solving through hands-on projects and coursework. Worked well in
-        teams.
+        problem-solving through hands-on projects and coursework.
       </p>
     </div>
   ),
