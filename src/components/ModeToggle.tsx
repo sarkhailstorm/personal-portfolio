@@ -5,7 +5,11 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
-export const ModeToggle: React.FC = () => {
+type ModeToggleProps = {
+  onClick?: () => void;
+};
+
+export const ModeToggle: React.FC<ModeToggleProps> = ({ onClick }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
@@ -15,6 +19,7 @@ export const ModeToggle: React.FC = () => {
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+    onClick?.(); // call optional prop
   };
 
   return (
