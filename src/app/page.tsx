@@ -62,14 +62,14 @@ const HomePage = () => {
 
       <div className="flex flex-col md:w-1/2 md:gap-2 gap-4">
         <motion.h1
-          className="md:text-5xl text-4xl text-center md:text-start font-bold"
+          className="md:text-5xl text-4xl text-center md:text-start font-bold dark:text-white text-black"
           variants={fadeInLeft}
         >
-          Hiya, I&apos;m <span className="text-[#ff004f]">Sarkhail</span>
+          Hiya, I&apos;m <span className="dark:text-[#ff004f] text-indigo-700 ">Sarkhail</span>
         </motion.h1>
 
         <motion.span
-          className="md:text-3xl md:text-start text-2xl text-center text-blue-300 font-semibold"
+          className="md:text-3xl md:text-start text-2xl text-center dark:text-blue-300 text-indigo-500 font-semibold"
           variants={fadeInRight}
         >
           <ReactTyped
@@ -88,7 +88,7 @@ const HomePage = () => {
         </motion.span>
 
         <motion.p
-          className="md:w-[85%] pt-2 text-gray-300 w-[100%] md:text-start text-center md:px-0 px-4"
+          className="md:w-[85%] pt-2 dark:text-gray-300 text-gray-600 w-[100%] md:text-start text-center md:px-0 px-4"
           variants={fadeInRight}
         >
           Software Developer who&apos;s all about building cool and functional
@@ -104,7 +104,7 @@ const HomePage = () => {
           <a
             href="/cv.pdf"
             download
-            className="group flex items-center max-w-max p-1 rounded-xl bg-[#800020] transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 md:hover:bg-[#800020] hover:bg-blue-600"
+            className="group flex items-center max-w-max p-1 rounded-xl dark:bg-[#800020] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 dark:md:hover:bg-[#800020] hover:bg-blue-600"
           >
             {screenSize === "desktop" ? (
               <MdOutlineReadMore className="text-4xl transition-transform duration-300" />
