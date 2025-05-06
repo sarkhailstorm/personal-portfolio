@@ -80,7 +80,7 @@ const Navbar = () => {
             </a>
             <ModeToggle onClick={() => setIsOpen(false)} />
           </div>
-          <div className="bg-[#800020] rounded-xl px-4 py-2 hover:bg-blue-700 hover:scale-110 ease-in-out duration-300 cursor-pointer md:block hidden">
+          <div className="dark:bg-[#800020] bg-indigo-700 hover:bg-indigo-600 rounded-xl px-4 py-2 dark:hover:bg-blue-700 hover:scale-110 ease-in-out duration-300 cursor-pointer md:block hidden">
             <Link href="/contact">Hire Me</Link>
           </div>
         </div>
