@@ -69,7 +69,7 @@ const HomePage = () => {
         </motion.h1>
 
         <motion.span
-          className="md:text-3xl md:text-start text-2xl text-center dark:text-blue-300 text-indigo-500 font-semibold"
+          className="md:text-3xl md:text-start text-2xl text-center dark:text-blue-300 text-sky-800 font-semibold"
           variants={fadeInRight}
         >
           <ReactTyped
