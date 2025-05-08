@@ -36,7 +36,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <DisableInspect />
+          {/* <DisableInspect /> */}
           <Toaster position="top-center" />
           <Loading />
           <Navbar />
