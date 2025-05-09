@@ -62,14 +62,14 @@ const HomePage = () => {
 
       <div className="flex flex-col md:w-1/2 md:gap-2 gap-4">
         <motion.h1
-          className="md:text-5xl text-4xl text-center md:text-start font-bold dark:text-white text-black"
+          className="md:text-5xl text-4xl text-center md:text-start font-bold dark:text-white text-gray-800"
           variants={fadeInLeft}
         >
           Hiya, I&apos;m <span className="dark:text-[#ff004f] text-indigo-700 ">Sarkhail</span>
         </motion.h1>
 
         <motion.span
-          className="md:text-3xl md:text-start text-2xl text-center dark:text-blue-300 text-sky-800 font-semibold"
+          className="md:text-3xl md:text-start text-2xl text-center dark:text-blue-300 text-slate-600 font-semibold"
           variants={fadeInRight}
         >
           <ReactTyped
