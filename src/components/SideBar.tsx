@@ -71,7 +71,7 @@ const SideBar = () => {
             <Link
               href={href}
               className={`group relative flex items-center md:hover:gap-3 px-3 py-2 md:p-3 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
-                pathname === href ? "md:bg-blue-700 bg-none" : "md:bg-[#800020]"
+                pathname === href ? "dark:md:bg-blue-700 bg-none md:bg-slate-800" : "dark:md:bg-[#800020] md:bg-indigo-700"
               }`}
               onClick={() => setIsOpen(false)}
             >
