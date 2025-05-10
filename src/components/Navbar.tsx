@@ -43,7 +43,7 @@ const Navbar = () => {
             <a
               href="#"
               title="Discord"
-              className="bg-[#09090B] outline outline-1 outline-[#2c2c2c] hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+              className="dark:bg-[#09090B] bg-slate-800 outline outline-1 outline-[#2c2c2c] dark:hover:bg-[#5865F2] hover:bg-[#5865F2] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
               onClick={(e) => {
                 if (e.currentTarget.getAttribute("href") === "#") {
                   e.preventDefault();
@@ -59,7 +59,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Github"
-              className="bg-[#09090B] outline outline-1 outline-[#2c2c2c] hover:bg-blue-100 ease-in-out duration-300 text-white hover:text-black rounded-full w-[39px] h-[39px] flex justify-center items-center"
+              className="dark:bg-[#09090B] bg-slate-800 outline outline-1 outline-[#2c2c2c] dark:hover:bg-blue-100 hover:bg-blue-100 ease-in-out duration-300 text-white hover:text-black rounded-full w-[39px] h-[39px] flex justify-center items-center"
               onClick={() => setIsOpen(false)}
             >
               <FaGithub className="text-2xl ease-in-out duration-300 hover:scale-125 hover:text-black" />
@@ -67,7 +67,7 @@ const Navbar = () => {
             <a
               href="#"
               title="Signal Messenger"
-              className="bg-[#09090B] outline outline-1 outline-[#2c2c2c] hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
+              className="dark:bg-[#09090B] bg-slate-800 outline outline-1 outline-[#2c2c2c] dark:hover:bg-[#184fbc] hover:bg-[#184fbc] ease-in-out duration-300 rounded-full w-[39px] h-[39px] flex justify-center items-center"
               onClick={(e) => {
                 if (e.currentTarget.getAttribute("href") === "#") {
                   e.preventDefault();

@@ -27,7 +27,7 @@ export const ModeToggle: React.FC<ModeToggleProps> = ({ onClick }) => {
       variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="dark:text-white w-[39px] h-[39px] rounded-full bg-[#09090B] outline outline-1 outline-[#2c2c2c] hover:text-white hover:bg-[#1b1b21] ease-in-out duration-300"
+      className="dark:text-white w-[39px] h-[39px] rounded-full dark:bg-[#09090B] bg-slate-800 outline outline-1 outline-[#2c2c2c] hover:text-white hover:bg-[#1b1b21] ease-in-out duration-300"
     >
       {mounted ? (
         theme === "dark" ? (
