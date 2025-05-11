@@ -9,9 +9,11 @@ import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { IoIosContact } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {theme} = useTheme();
 
   return (
     <>
@@ -35,8 +37,8 @@ const Navbar = () => {
             : "translate-x-full bottom-[-32px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-200 ease-in"
         } md:translate-x-0 md:opacity-100`}
       >
-        <Link href="/" className="md:flex hidden justify-center items-center">
-          <img src="/letter-s.png" alt="Logo" className="w-14 h-14" />
+        <Link href="/" className="md:flex hidden justify-center items-center text-black">
+          <img src={`${theme === "dark" ? "/letter-s dark2.png" : "/letter-s light.png"}`} alt="Logo" className="w-12 h-12" />
         </Link>
         <div className="flex gap-4 justify-center md:justify-start">
           <div className="flex gap-4">
