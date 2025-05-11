@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaDiscord } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaSignalMessenger } from "react-icons/fa6";
@@ -13,7 +13,12 @@ import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {theme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -37,9 +42,16 @@ const Navbar = () => {
             : "translate-x-full bottom-[-32px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-200 ease-in"
         } md:translate-x-0 md:opacity-100`}
       >
-        <Link href="/" className="md:flex hidden justify-center items-center text-black">
-          <img src={`${theme === "dark" ? "/letter-s dark2.png" : "/letter-s light.png"}`} alt="Logo" className="w-12 h-12" />
-        </Link>
+        {mounted && (
+          <img
+            src={
+              theme === "dark" ? "/letter-s dark2.png" : "/letter-s light.png"
+            }
+            alt="Logo"
+            className="w-12 h-12"
+          />
+        )}
+
         <div className="flex gap-4 justify-center md:justify-start">
           <div className="flex gap-4">
             <a
