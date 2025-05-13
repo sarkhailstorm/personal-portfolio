@@ -29,7 +29,7 @@ const Navbar = () => {
         {isOpen ? (
           <IoIosClose className="text-white bg-red-700 rounded-full" />
         ) : (
-          <IoIosContact />
+          <IoIosContact className="dark:text-white text-slate-800" />
         )}
       </div>
       <motion.nav
