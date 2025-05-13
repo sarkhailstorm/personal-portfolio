@@ -65,7 +65,7 @@ const HomePage = () => {
           className="md:text-5xl text-4xl text-center md:text-start font-bold dark:text-white text-gray-800"
           variants={fadeInLeft}
         >
-          Hiya, I&apos;m <span className="dark:text-[#ff004f] text-indigo-700 ">Sarkhail</span>
+          Hiya, I&apos;m <span className="dark:text-[#FF0000] text-indigo-700 ">Sarkhail</span>
         </motion.h1>
 
         <motion.span
@@ -104,7 +104,7 @@ const HomePage = () => {
           <a
             href="/cv.pdf"
             download
-            className="group flex items-center max-w-max p-1 rounded-xl dark:bg-[#800020] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 dark:md:hover:bg-[#800020] hover:bg-blue-600"
+            className="group flex items-center max-w-max p-1 rounded-xl dark:bg-[#FF0000] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 dark:md:hover:bg-[#FF0000] hover:bg-blue-600"
           >
             {screenSize === "desktop" ? (
               <MdOutlineReadMore className="text-4xl transition-transform duration-300" />

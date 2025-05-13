@@ -42,13 +42,13 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="fixed flex items-center px-8 bg-[#040404] border-b-2 border-red-700 h-[10%] right-0 left-0 md:hidden">
+      <div className="fixed flex items-center px-8 bg-[#040404] border-b-2 border-[#FF0000] h-[10%] right-0 left-0 md:hidden">
         <div
           className="fixed right-5 z-0 p-3 cursor-pointer text-white text-3xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <IoCloseSharp className="text-red-600" />
+            <IoCloseSharp className="text-[#FF0000]" />
           ) : (
             <AiOutlineUnorderedList className="text-[2.2rem]" />
           )}
@@ -59,7 +59,7 @@ const SideBar = () => {
               <Image
                 src={`${
                   theme === "dark"
-                    ? "/letter-s dark2.png"
+                    ? "/letter-s dark.png"
                     : "/letter-s light.png"
                 }`}
                 alt="Logo"
@@ -88,7 +88,7 @@ const SideBar = () => {
               className={`group relative flex items-center md:hover:gap-3 px-3 py-2 md:p-3 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
                 pathname === href
                   ? "dark:md:bg-blue-700 bg-none md:bg-slate-800"
-                  : "dark:md:bg-[#800020] md:bg-indigo-700"
+                  : "dark:md:bg-[#FF0000] md:bg-indigo-700"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -98,7 +98,7 @@ const SideBar = () => {
               <motion.span
                 className={`text-3xl transition-transform duration-300 ${
                   pathname === href
-                    ? "text-red-600 md:text-white"
+                    ? "text-[#FF0000] md:text-white"
                     : "text-white"
                 }`}
               >

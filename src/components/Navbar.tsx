@@ -27,7 +27,7 @@ const Navbar = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
-          <IoIosClose className="text-white bg-red-700 rounded-full" />
+          <IoIosClose className="text-white bg-[#FF0000] rounded-full" />
         ) : (
           <IoIosContact className="dark:text-white text-slate-800" />
         )}
@@ -36,7 +36,7 @@ const Navbar = () => {
         initial={{ y: -50 }}
         animate={{ y: 0 }}
         transition={{ duration: 1, delay: 1 }}
-        className={`fixed left-0 bottom-0 md:bottom-auto p-4 flex md:bg-transparent md:border-none border-2 border-t-red-600 bg-gray-950 items-center justify-between w-full px-24 py-4 z-40 ${
+        className={`fixed left-0 bottom-0 md:bottom-auto p-4 flex md:bg-transparent md:border-none border-2 border-t-[#FF0000] bg-gray-950 items-center justify-between w-full px-24 py-4 z-40 ${
           isOpen
             ? "translate-x-0 bottom-0 opacity-100 transform transition-all duration-200 ease-out"
             : "translate-x-full bottom-[-32px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-200 ease-in"
@@ -45,7 +45,7 @@ const Navbar = () => {
         {mounted && (
           <img
             src={
-              theme === "dark" ? "/letter-s dark2.png" : "/letter-s light.png"
+              theme === "dark" ? "/letter-s dark.png" : "/letter-s light.png"
             }
             alt="Logo"
             className="w-12 h-12 hidden md:flex"
@@ -94,7 +94,7 @@ const Navbar = () => {
             </a>
             <ModeToggle onClick={() => setIsOpen(false)} />
           </div>
-          <div className="dark:bg-[#800020] bg-indigo-700 hover:bg-indigo-600 rounded-xl px-4 py-2 dark:hover:bg-blue-700 hover:scale-110 ease-in-out duration-300 cursor-pointer md:block hidden">
+          <div className="dark:bg-[#FF0000] bg-indigo-700 hover:bg-indigo-600 rounded-xl px-4 py-2 dark:hover:bg-blue-700 hover:scale-110 ease-in-out duration-300 cursor-pointer md:block hidden">
             <Link href="/contact">Hire Me</Link>
           </div>
         </div>
