@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { navLinks } from "@/data/navlinks";
+import { useTheme } from "next-themes";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -32,6 +33,12 @@ const childVariants = {
 const SideBar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -40,19 +47,27 @@ const SideBar = () => {
           className="fixed right-5 z-0 p-3 cursor-pointer text-white text-3xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <IoCloseSharp className="text-red-600" /> : <AiOutlineUnorderedList className="text-[2.2rem]" />
-
-          }
+          {isOpen ? (
+            <IoCloseSharp className="text-red-600" />
+          ) : (
+            <AiOutlineUnorderedList className="text-[2.2rem]" />
+          )}
         </div>
         <div>
           <Link href="/">
-            <Image
-              src="/letter-s.png"
-              alt="Logo"
-              width={36}
-              height={36}
-              priority
-            />
+            {mounted && (
+              <Image
+                src={`${
+                  theme === "dark"
+                    ? "/letter-s dark2.png"
+                    : "/letter-s light.png"
+                }`}
+                alt="Logo"
+                width={36}
+                height={36}
+                priority
+              />
+            )}
           </Link>
         </div>
       </div>
@@ -71,7 +86,9 @@ const SideBar = () => {
             <Link
               href={href}
               className={`group relative flex items-center md:hover:gap-3 px-3 py-2 md:p-3 rounded-full transition-all duration-300 ease-in-out md:hover:pl-5 ${
-                pathname === href ? "dark:md:bg-blue-700 bg-none md:bg-slate-800" : "dark:md:bg-[#800020] md:bg-indigo-700"
+                pathname === href
+                  ? "dark:md:bg-blue-700 bg-none md:bg-slate-800"
+                  : "dark:md:bg-[#800020] md:bg-indigo-700"
               }`}
               onClick={() => setIsOpen(false)}
             >

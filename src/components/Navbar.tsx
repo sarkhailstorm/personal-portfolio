@@ -48,7 +48,7 @@ const Navbar = () => {
               theme === "dark" ? "/letter-s dark2.png" : "/letter-s light.png"
             }
             alt="Logo"
-            className="w-12 h-12"
+            className="w-12 h-12 hidden md:flex"
           />
         )}
 
