@@ -42,7 +42,7 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="fixed flex items-center px-8 bg-[#040404] border-b-2 border-[#FF0000] h-[10%] right-0 left-0 md:hidden">
+      <div className="fixed flex items-center px-8 dark:bg-[#040404] bg-gray-200 border-b-2 dark:border-[#FF0000] h-[10%] border-indigo-800 right-0 left-0 md:hidden">
         <div
           className="fixed right-5 z-0 p-3 cursor-pointer text-white text-3xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -50,7 +50,7 @@ const SideBar = () => {
           {isOpen ? (
             <IoCloseSharp className="text-[#FF0000]" />
           ) : (
-            <AiOutlineUnorderedList className="text-[2.2rem]" />
+            <AiOutlineUnorderedList className="text-[2.2rem] dark:text-white text-slate-800" />
           )}
         </div>
         <div>
@@ -72,7 +72,7 @@ const SideBar = () => {
         </div>
       </div>
       <motion.nav
-        className={`fixed right-0 left-0 justify-center md:bg-transparent bg-gray-950 md:left-auto mt-20 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
+        className={`fixed right-0 left-0 justify-center md:bg-transparent dark:bg-gray-950 bg-gray-300 md:left-auto mt-20 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
           isOpen
             ? "translate-x-0 opacity-100 scale-100 transform transition-all duration-300 ease-out"
             : "translate-x-full opacity-0 scale-75 md:scale-100 transform transition-all duration-300 ease-in"
@@ -98,8 +98,8 @@ const SideBar = () => {
               <motion.span
                 className={`text-3xl transition-transform duration-300 ${
                   pathname === href
-                    ? "text-[#FF0000] md:text-white"
-                    : "text-white"
+                    ? "dark:text-[#FF0000] text-indigo-700 md:text-white"
+                    : "dark:text-white text-slate-800 md:text-white"
                 }`}
               >
                 {icon}
