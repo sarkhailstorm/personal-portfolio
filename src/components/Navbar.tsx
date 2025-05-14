@@ -38,8 +38,8 @@ const Navbar = () => {
         transition={{ duration: 1, delay: 1 }}
         className={`fixed left-0 bottom-0 md:bottom-auto p-4 flex md:bg-transparent md:border-none border-2 border-t-[#FF0000] bg-gray-950 items-center justify-between w-full px-24 py-4 z-40 ${
           isOpen
-            ? "translate-x-0 bottom-0 opacity-100 transform transition-all duration-200 ease-out"
-            : "translate-x-full bottom-[-32px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-200 ease-in"
+            ? "translate-x-0 -bottom-1 opacity-100 transform transition-all duration-200 ease-out"
+            : "translate-x-full bottom-[-100px] opacity-0 scale-75 md:scale-100 md:transition-none transform transition-all duration-200 ease-in"
         } md:translate-x-0 md:opacity-100`}
       >
         {mounted && (
