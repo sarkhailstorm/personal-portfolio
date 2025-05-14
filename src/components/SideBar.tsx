@@ -72,7 +72,7 @@ const SideBar = () => {
         </div>
       </div>
       <motion.nav
-        className={`fixed right-0 left-0 justify-center md:bg-transparent dark:bg-gray-950 bg-gray-300 md:left-auto mt-16 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
+        className={`fixed right-0 left-0 justify-center md:bg-transparent dark:bg-gray-950 bg-gray-300 md:left-auto mt-18 flex md:mt-0 md:flex-col gap-4 md:justify-center md:items-end md:h-screen p-3 md:p-4 z-40 ${
           isOpen
             ? "translate-x-0 opacity-100 scale-100 transform transition-all duration-300 ease-out"
             : "translate-x-full opacity-0 scale-75 md:scale-100 transform transition-all duration-300 ease-in"
