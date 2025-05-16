@@ -46,7 +46,7 @@ const SkillsPage = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{
               duration: 1,
-              delay: 3,
+              delay: 1.8,
               type: "spring",
               stiffness: 100,
               damping: 8,
@@ -61,7 +61,7 @@ const SkillsPage = () => {
           className="flex flex-col justify-center items-center"
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 4 }}
+          transition={{ duration: 1, delay: 2.5 }}
         >
           <div className="container md:mx-auto marquee-container p-4 rounded-2xl flex flex-col gap-8 overflow-x-hidden">
             <motion.div
