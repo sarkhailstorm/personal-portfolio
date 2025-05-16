@@ -7,10 +7,8 @@ import { FaSignalMessenger } from "react-icons/fa6";
 import { ModeToggle } from "./ModeToggle";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import { IoIosContact } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { useTheme } from "next-themes";
-import { FaTelegram } from "react-icons/fa";
 import { TbMessage2Up } from "react-icons/tb";
 
 const Navbar = () => {
