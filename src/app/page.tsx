@@ -118,7 +118,7 @@ const HomePage = () => {
           <a
             href="/cv.pdf"
             download
-            className="group flex items-center max-w-max p-1 rounded-xl dark:bg-[#FF0000] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 dark:md:hover:bg-[#FF0000] hover:bg-blue-600"
+            className="group flex items-center max-w-max p-1 rounded-lg dark:bg-[#FF0000] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 dark:md:hover:bg-[#FF0000] hover:bg-indigo-600"
           >
             {screenSize === "desktop" ? (
               <MdOutlineReadMore className="text-4xl transition-transform duration-300" />
