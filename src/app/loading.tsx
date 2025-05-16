@@ -19,7 +19,9 @@ const Loading = () => {
     }, 1000);
     return () => clearTimeout(timer);
   }, [pathname]);
-
+  
+  if (!mounted) return null;
+  
   return isLoading ? (
     <div className="dark:bg-black inset-0 z-50 fixed flex items-center justify-center">
       <HashLoader color={theme === "dark" ? "#FF0000" : "#3730a3"} size={100} />
