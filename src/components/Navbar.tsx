@@ -10,6 +10,8 @@ import toast from "react-hot-toast";
 import { IoIosContact } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { useTheme } from "next-themes";
+import { FaTelegram } from "react-icons/fa";
+import { TbMessage2Up } from "react-icons/tb";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +31,8 @@ const Navbar = () => {
         {isOpen ? (
           <IoIosClose className="text-white bg-[#FF0000] rounded-full" />
         ) : (
-          <IoIosContact className="dark:text-white text-slate-800" />
+          <TbMessage2Up className="dark:text-white text-slate-800 text-[2.5rem]"/>
+
         )}
       </div>
       <motion.nav
