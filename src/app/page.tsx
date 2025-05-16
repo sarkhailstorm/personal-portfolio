@@ -4,6 +4,7 @@ import { MdOutlineReadMore } from "react-icons/md";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { HiOutlineDownload } from "react-icons/hi";
+import { useTheme } from "next-themes";
 
 const fadeInLeft = {
   hidden: { opacity: 0, x: -200 },
@@ -22,6 +23,8 @@ const fadeInUp = {
 
 const HomePage = () => {
   const [screenSize, setScreenSize] = useState("desktop");
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const updateSize = () => {
@@ -31,6 +34,10 @@ const HomePage = () => {
     updateSize();
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
   }, []);
 
   return (
@@ -43,20 +50,26 @@ const HomePage = () => {
         className="marginTop md:w-[43%] w-[80%] border-2 md:border-0 dark:border-blue-500 border-indigo-800 mt-8 md:mt-0 
              md:rounded-none rounded-full overflow-hidden flex items-center justify-center md:cursor-auto cursor-pointer"
         variants={fadeInLeft}
-        whileTap={screenSize === "mobile" ? { borderColor: "#FF0000", rotate: 360 } : {}}
-        transition={screenSize === "mobile" ? { duration: 1.5, ease: "easeInOut" } : {}}
+        whileTap={
+          screenSize === "mobile" ? { borderColor: "#FF0000", rotate: 360 } : {}
+        }
+        transition={
+          screenSize === "mobile" ? { duration: 1.5, ease: "easeInOut" } : {}
+        }
       >
-        <motion.img
-          src="boy.png"
-          alt="Portfolio"
-          className="w-full h-full object-cover"
-          animate={screenSize === "desktop" ? { scale: [1, 1.05, 1] } : {}}
-          transition={
-            screenSize === "desktop"
-              ? { duration: 3, repeat: Infinity, ease: "linear" }
-              : {}
-          }
-        />
+        {mounted && (
+          <motion.img
+            src={`${theme === "dark" ? "/boy dark.png" : "/boy light.png"}`}
+            alt="Portfolio"
+            className="w-full h-full object-cover"
+            animate={screenSize === "desktop" ? { scale: [1, 1.05, 1] } : {}}
+            transition={
+              screenSize === "desktop"
+                ? { duration: 3, repeat: Infinity, ease: "linear" }
+                : {}
+            }
+          />
+        )}
       </motion.div>
       <div className="absolute hidden md:block bottom-0 left-0 w-full h-6 dark:bg-black bg-white blur-sm"></div>
 
@@ -65,7 +78,8 @@ const HomePage = () => {
           className="md:text-5xl text-4xl text-center md:text-start font-bold dark:text-white text-gray-800"
           variants={fadeInLeft}
         >
-          Hiya, I&apos;m <span className="dark:text-[#FF0000] text-indigo-700 ">Sarkhail</span>
+          Hiya, I&apos;m{" "}
+          <span className="dark:text-[#FF0000] text-indigo-700 ">Sarkhail</span>
         </motion.h1>
 
         <motion.span
