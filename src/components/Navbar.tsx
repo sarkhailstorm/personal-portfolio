@@ -33,7 +33,7 @@ const Navbar = () => {
         )}
       </div>
       <motion.nav
-        initial={{ y: -50 }}
+        initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 1, delay: 1 }}
         className={`fixed left-0 bottom-0 md:bottom-auto p-4 flex md:bg-transparent md:border-none border-2 dark:border-t-[#FF0000] border-t-indigo-800 dark:bg-gray-950 dark:md:bg-transparent bg-gray-200 items-center justify-between w-full px-24 py-4 z-40 ${
