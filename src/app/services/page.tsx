@@ -36,7 +36,7 @@ const ServicesPage = () => {
             damping: 5,
             mass: 1,
           }}
-          className="text-4xl font-bold md:mt-20"
+          className="text-4xl font-bold md:mt-20 dark:text-white text-gray-800"
         >
           How do I help?
         </motion.h1>
