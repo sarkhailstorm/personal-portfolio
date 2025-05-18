@@ -68,8 +68,8 @@ const ServicesPage = () => {
                           />
                         </div>
                         <div className="flex flex-col gap-4">
-                          <h1 className="font-bold text-xl">{service.title}</h1>
-                          <p>{service.desc}</p>
+                          <h1 className="font-bold text-xl dark:text-white text-gray-800">{service.title}</h1>
+                          <p className="dark:text-white text-gray-600">{service.desc}</p>
                         </div>
                       </CardContent>
                     </Card>
