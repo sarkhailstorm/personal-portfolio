@@ -59,7 +59,7 @@ const ServicesPage = () => {
                 <CarouselItem key={index}>
                   <div className="p-1">
                     <Card>
-                      <CardContent className="flex flex-col gap-2 aspect-square p-6 dark:border-none border border-gray-400 rounded-xl">
+                      <CardContent className="flex flex-col gap-2 aspect-square p-6 dark:border-none border border-gray-300 rounded-xl">
                         <div>
                           <img
                             src={service.img}
