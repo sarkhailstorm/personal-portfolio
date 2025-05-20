@@ -68,8 +68,12 @@ const ServicesPage = () => {
                           />
                         </div>
                         <div className="flex flex-col gap-4">
-                          <h1 className="font-bold text-xl dark:text-white text-gray-800">{service.title}</h1>
-                          <p className="dark:text-white text-gray-600">{service.desc}</p>
+                          <h1 className="font-bold text-xl dark:text-white text-gray-800">
+                            {service.title}
+                          </h1>
+                          <p className="dark:text-white text-gray-600">
+                            {service.desc}
+                          </p>
                         </div>
                       </CardContent>
                     </Card>
@@ -87,19 +91,40 @@ const ServicesPage = () => {
           </div>
         </div>
         <div className="md:flex flex-col gap-4 md:w-1/2 md:items-start items-center hidden">
-          <nav className="flex gap-4">
-            {Object.keys(details).map((key) => (
-              <div
-                key={key}
-                onClick={() => setActiveSection(key as keyof typeof details)}
-                className={`cursor-pointer ${
-                  activeSection === key ? "border-b-4 border-[#27272a] dark:text-white text-gray-800" : "border-0 dark:text-gray-400 text-gray-500"
-                }`}
-              >
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-              </div>
-            ))}
+          <nav className="relative flex gap-4">
+            {Object.keys(details).map((key) => {
+              const isActive = activeSection === key;
+              return (
+                <div
+                  key={key}
+                  onClick={() => setActiveSection(key as keyof typeof details)}
+                  className="relative cursor-pointer py-2"
+                >
+                  <span
+                    className={`${
+                      isActive
+                        ? "dark:text-white text-gray-800"
+                        : "dark:text-gray-400 text-gray-500"
+                    }`}
+                  >
+                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                  </span>
+                  {isActive && (
+                    <motion.div
+                      layoutId="underline"
+                      className="absolute bottom-0 left-0 right-0 h-1 bg-[#27272a] rounded"
+                      transition={{
+                        type: "spring",
+                        stiffness: 500,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                </div>
+              );
+            })}
           </nav>
+
           <div className="p-4 border dark:border-[#27272a] border-gray-300 rounded-xl dark:shadow-none shadow-sm shadow-gray-300 h-64">
             {details[activeSection]}
           </div>
