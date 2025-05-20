@@ -100,7 +100,7 @@ const ServicesPage = () => {
               </div>
             ))}
           </nav>
-          <div className="p-4 border h-64 rounded-md">
+          <div className="p-4 border dark:border-[#27272a] border-gray-300 rounded-xl dark:shadow-none shadow-sm shadow-gray-300 h-64">
             {details[activeSection]}
           </div>
         </div>
