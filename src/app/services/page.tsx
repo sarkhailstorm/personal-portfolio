@@ -93,7 +93,7 @@ const ServicesPage = () => {
                 key={key}
                 onClick={() => setActiveSection(key as keyof typeof details)}
                 className={`cursor-pointer ${
-                  activeSection === key ? "border-b-4" : "border-0"
+                  activeSection === key ? "border-b-4 border-[#27272a] dark:text-white text-gray-800" : "border-0 dark:text-gray-400 text-gray-500"
                 }`}
               >
                 {key.charAt(0).toUpperCase() + key.slice(1)}
