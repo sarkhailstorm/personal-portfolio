@@ -10,7 +10,9 @@ export const details: Record<string, React.ReactNode> = {
         width={150}
         height={150}
       />
-      <h1 className="font-bold text-xl dark:text-white text-gray-800">Web Developer Intern</h1>
+      <h1 className="font-bold text-xl dark:text-white text-gray-800">
+        Web Developer Intern
+      </h1>
       <p className="dark:text-white text-gray-600">
         During my front-end internship at Apexure, I built web interfaces and
         interactive features for client projects using modern JavaScript.
@@ -21,14 +23,15 @@ export const details: Record<string, React.ReactNode> = {
   ),
   experience: (
     <div className="flex flex-col gap-2">
-      <Image src="/Experience.webp" alt="Logo" width={120} height={100} />
-      <h1 className="font-bold text-xl dark:text-white text-gray-800">Software Developer</h1>
+      <Image src="/tech.png" alt="Logo" width={120} height={100} />
+      <h1 className="font-bold text-xl dark:text-white text-gray-800">
+        Software Developer
+      </h1>
       <div className="flex flex-col gap-2">
         <p className="dark:text-white text-gray-600">
-          Developed multiple full-stack web applications using modern
-          technologies like Next.js, focusing on performance and user
-          experience, while also actively contributing bug fixes and new
-          features to open-source projects on GitHub.
+          Developed multiple full-stack web apps with modern technologies like Next.js, focusing on performance and
+          UX, while contributing features and bug fixes to collaborative GitHub
+          projects.
         </p>
       </div>
     </div>
