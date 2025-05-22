@@ -37,7 +37,7 @@ const SkillsPage = () => {
               damping: 5,
               mass: 1,
             }}
-            className="md:text-4xl text-[1.8rem] font-bold"
+            className="md:text-4xl text-[1.8rem] font-bold dark:text-white text-gray-800"
           >
             Curious about my skills?
           </motion.h1>
@@ -52,7 +52,7 @@ const SkillsPage = () => {
               damping: 8,
               mass: 1,
             }}
-            className="text-2xl font-semibold text-blue-400"
+            className="text-2xl font-semibold dark:text-blue-400 text-indigo-800"
           >
             Let me fill you in!
           </motion.h2>
