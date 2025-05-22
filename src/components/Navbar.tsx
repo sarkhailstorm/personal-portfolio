@@ -29,8 +29,7 @@ const Navbar = () => {
         {isOpen ? (
           <IoIosClose className="text-white bg-[#FF0000] rounded-full" />
         ) : (
-          <TbMessage2Up className="dark:text-white text-slate-800 text-[2.5rem]"/>
-
+          <TbMessage2Up className="dark:text-white text-slate-800 text-[2.5rem]" />
         )}
       </div>
       <motion.nav
