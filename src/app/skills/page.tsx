@@ -77,8 +77,10 @@ const SkillsPage = () => {
                 <Tooltip key={index}>
                   <TooltipTrigger asChild>
                     <img
-                      className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
-                        skill === "/Three.js.svg" ? "bg-white p-1" : "bg-black"
+                      className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 dark:hover:ring-blue-500 hover:ring-indigo-800 ease-in-out duration-300 hover:p-2 ${
+                        skill === "/Three.js.svg"
+                          ? "bg-white p-1"
+                          : "dark:bg-black"
                       }`}
                       src={skill}
                       alt={`Image ${index}`}
@@ -104,10 +106,10 @@ const SkillsPage = () => {
                 <Tooltip key={index}>
                   <TooltipTrigger asChild>
                     <img
-                      className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 hover:ring-blue-500 ease-in-out duration-300 hover:p-2 ${
+                      className={`w-16 rounded-lg hover:cursor-pointer hover:scale-90 hover:ring-2 dark:hover:ring-blue-500 hover:ring-indigo-800 ease-in-out duration-300 hover:p-2 ${
                         skill === "/Next.js.svg" || skill === "/Express.svg"
                           ? "bg-white p-1"
-                          : "bg-black"
+                          : "dark:bg-black"
                       }`}
                       src={skill}
                       alt={`Image ${index}`}
