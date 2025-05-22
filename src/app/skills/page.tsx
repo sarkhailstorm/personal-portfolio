@@ -92,7 +92,7 @@ const SkillsPage = () => {
                 </Tooltip>
               ))}
             </motion.div>
-            <div className="border-2 border-gray-800"></div>
+            <div className="border-2 dark:border-gray-800 border-gray-400"></div>
             <motion.div
               className="flex gap-12"
               animate={
