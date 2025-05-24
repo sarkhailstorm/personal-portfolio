@@ -28,7 +28,7 @@ const ProjectsPage = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="relative group card dark:bg-[#000000] dark:text-white text-black w-80 border-[1.5px]  shadow-xl overflow-hidden cursor-pointer"
+            className="relative group card dark:bg-[#000000] dark:text-white text-black w-80 border-[1.5px] shadow-xl overflow-hidden cursor-pointer"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -45,12 +45,12 @@ const ProjectsPage = () => {
               <h2 className="card-title">{project.title}</h2>
               <p>{project.desc}</p>
             </div>
-            <div className="absolute bottom-0 left-0 w-full h-0 bg-black flex items-center justify-center opacity-0 group-hover:h-full group-hover:opacity-100 transition-all duration-500">
+            <div className="absolute bottom-0 left-0 w-full h-0 dark:bg-black bg-white flex items-center justify-center opacity-0 group-hover:h-full group-hover:opacity-100 transition-all duration-500">
               <a
                 href={project.link}
                 target="_blank"
                 title="Visit External Site"
-                className="text-white flex items-center gap-3 text-2xl font-semibold tracking-wide hover:text-gray-400"
+                className="flex items-center gap-3 text-2xl font-semibold tracking-wide dark:text-white text-black dark:hover:text-gray-400 hover:text-gray-600"
                 onClick={(e) => {
                   if (project.link === "#") {
                     e.preventDefault();
