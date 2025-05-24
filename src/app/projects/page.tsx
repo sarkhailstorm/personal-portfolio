@@ -28,7 +28,7 @@ const ProjectsPage = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="relative group card bg-[#000000] w-80 border-[1.5px]  shadow-xl overflow-hidden cursor-pointer"
+            className="relative group card dark:bg-[#000000] dark:text-white text-black w-80 border-[1.5px]  shadow-xl overflow-hidden cursor-pointer"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
