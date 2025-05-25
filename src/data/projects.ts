@@ -6,6 +6,12 @@ export const projects = [
     link: "#",
   },
   {
+    img: "Smart Home.png",
+    title: "Smart Home App",
+    desc: "Created a Java CLI application for smart home management, including device control, room status monitoring etc.",
+    link: "#",
+  },
+  {
     img: "Cloud File Manager.png",
     title: "Cloud File Manager",
     desc: "A simple app that uses Supabase Cloud for file storage with JWT authentication.",
@@ -14,7 +20,7 @@ export const projects = [
   {
     img: "Portfolio Website.png",
     title: "Portfolio Website",
-    desc: "An animated Portfolio Website built with Next.js, TypeScript, Tailwind CSS, Framer Motion, ShadCN, and DaisyUI.",
+    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
     link: "https://my-animated-personal-portfolio-website.vercel.app",
   },
 
@@ -27,19 +33,25 @@ export const projects = [
   {
     img: "Coming Soon.png",
     title: "Hang Tight!",
-    desc: "More projects are coming soon. You might wanna have a look at my github profile for more info.",
+    desc: "Stay tuned for upcoming projects! Visit my GitHub profile for more.",
     link: "#",
   },
   {
     img: "Coming Soon.png",
     title: "Hang Tight!",
-    desc: "More projects are coming soon. You might wanna have a look at my github profile for more info.",
+    desc: "Stay tuned for upcoming projects! Visit my GitHub profile for more.",
     link: "#",
   },
   {
     img: "Coming Soon.png",
     title: "Hang Tight!",
-    desc: "More projects are coming soon. You might wanna take a look at my github profile for more info.",
+    desc: "Stay tuned for upcoming projects! Visit my GitHub profile for more.",
+    link: "#",
+  },
+  {
+    img: "Coming Soon.png",
+    title: "Hang Tight!",
+    desc: "Stay tuned for upcoming projects! Visit my GitHub profile for more.",
     link: "#",
   },
 ];
