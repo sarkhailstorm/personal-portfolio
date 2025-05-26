@@ -114,7 +114,7 @@ const ContactPage = () => {
               Name
             </Label>
             <Input
-              className="lg:py-6 lg:border-2 py-6 dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
+              className="lg:py-6 lg:border-2 py-6 dark:text-white dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
               required
               type="text"
               id="name"
@@ -129,7 +129,7 @@ const ContactPage = () => {
               Email
             </Label>
             <Input
-              className="lg:py-6 lg:border-2 py-6 dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
+              className="lg:py-6 lg:border-2 py-6 dark:text-white dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
               required
               type="email"
               id="email"
@@ -144,7 +144,7 @@ const ContactPage = () => {
               Message
             </Label>
             <Textarea
-              className="resize-none lg:border-2 dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
+              className="resize-none lg:border-2 dark:text-white dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
               required
               id="message"
               rows={6}
@@ -158,7 +158,7 @@ const ContactPage = () => {
             type="submit"
             className={`dark:hover:bg-[#2173cb] hover:bg-indigo-600 hover:scale-95 ease-in-out transition-transform duration-300 text-white ${
               isLoading
-                ? "bg-[#093360] text-[#949494] hover:bg-[#093360] hover:scale-100"
+                ? "dark:bg-[#093360] bg-[#3d47b3] dark:text-[#949494] text-[#b3b2b2] dark:hover:bg-[#093360] hover:bg-[#3d47b3] hover:scale-100"
                 : "dark:bg-[#0262c9] bg-indigo-800"
             }`}
           >
