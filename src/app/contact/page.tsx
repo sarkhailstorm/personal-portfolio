@@ -70,7 +70,7 @@ const ContactPage = () => {
       </motion.h1>
       <div className="md:hidden flex flex-col gap-4 mt-6">
         <motion.h1
-          className="text-[1.8rem] text-center font-bold"
+          className="text-[1.8rem] text-center font-bold dark:text-white text-gray-800"
           initial={{ y: -200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -98,7 +98,7 @@ const ContactPage = () => {
             mass: 1,
           }}
         >
-          <motion.span className="text-2xl font-bold text-blue-400">
+          <motion.span className="text-2xl font-bold dark:text-blue-400 text-indigo-800">
             Let&apos;s connect!
           </motion.span>
         </motion.div>
