@@ -54,7 +54,7 @@ const ContactPage = () => {
       className="flex flex-col md:gap-4 gap-20 justify-center items-center h-screen"
     >
       <motion.h1
-        className="font-bold text-3xl text-white md:mt-20 mt-28 md:block hidden"
+        className="font-bold text-3xl dark:text-white text-gray-800 md:mt-20 mt-28 md:block hidden"
         initial={{ y: -200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
