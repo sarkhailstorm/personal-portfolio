@@ -156,10 +156,10 @@ const ContactPage = () => {
           </div>
           <Button
             type="submit"
-            className={`hover:bg-[#2173cb] hover:scale-95 ease-in-out transition-transform duration-300 text-white ${
+            className={`dark:hover:bg-[#2173cb] hover:bg-indigo-600 hover:scale-95 ease-in-out transition-transform duration-300 text-white ${
               isLoading
                 ? "bg-[#093360] text-[#949494] hover:bg-[#093360] hover:scale-100"
-                : "bg-[#0262c9]"
+                : "dark:bg-[#0262c9] bg-indigo-800"
             }`}
           >
             <LuSend />
