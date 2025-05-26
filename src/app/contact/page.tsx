@@ -110,11 +110,11 @@ const ContactPage = () => {
           className="flex flex-col md:w-[30%] w-[90%] md:gap-4 gap-6"
         >
           <div className="flex flex-col gap-1">
-            <Label htmlFor="name" className="text-[16px]">
+            <Label htmlFor="name" className="text-[16px] dark:text-white text-gray-800">
               Name
             </Label>
             <Input
-              className="lg:py-6 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
+              className="lg:py-6 lg:border-2 py-6 dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
               required
               type="text"
               id="name"
@@ -125,11 +125,11 @@ const ContactPage = () => {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="email" className="text-[16px]">
+            <Label htmlFor="email" className="text-[16px] dark:text-white text-gray-800">
               Email
             </Label>
             <Input
-              className="lg:py-6 lg:border-2 py-6 focus:border-[#007bff] focus-visible:ring-0"
+              className="lg:py-6 lg:border-2 py-6 dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
               required
               type="email"
               id="email"
@@ -140,11 +140,11 @@ const ContactPage = () => {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="message" className="text-[16px]">
+            <Label htmlFor="message" className="text-[16px] dark:text-white text-gray-800">
               Message
             </Label>
             <Textarea
-              className="resize-none lg:border-2 focus:border-[#007bff] focus-visible:ring-0"
+              className="resize-none lg:border-2 dark:focus:border-[#007bff] dark:border-[#27272a] border-gray-400 focus:border-indigo-800 dark:caret-white caret-indigo-800 text-gray-800 focus-visible:ring-0"
               required
               id="message"
               rows={6}
