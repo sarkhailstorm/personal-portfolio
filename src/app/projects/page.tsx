@@ -24,7 +24,7 @@ const ProjectsPage = () => {
           Take a look at my work
         </motion.h1>
       </div>
-      <div className="h-[70vh] w-[85%] overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar dark:scrollbar-thumb-[#FF0000] scrollbar-thumb-gray-500 scrollbar-track-gray-900 scrollbar-thumb-rounded-full scrollbar-track-rounded-full flex flex-wrap justify-center gap-6 p-4">
+      <div className="h-[70vh] w-[85%] overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-900 scrollbar-thumb-rounded-full scrollbar-track-rounded-full flex flex-wrap justify-center gap-6 p-4">
         {projects.map((project, index) => (
           <motion.div
             key={index}
