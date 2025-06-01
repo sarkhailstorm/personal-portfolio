@@ -43,13 +43,15 @@ const Navbar = () => {
         } md:translate-x-0 md:opacity-100`}
       >
         {mounted && (
-          <img
-            src={
-              theme === "dark" ? "/letter-s dark.png" : "/letter-s light.png"
-            }
-            alt="Logo"
-            className="w-12 h-12 hidden md:flex"
-          />
+          <Link href={"/"}>
+            <img
+              src={
+                theme === "dark" ? "/letter-s dark.png" : "/letter-s light.png"
+              }
+              alt="Logo"
+              className="w-12 h-12 hidden md:flex"
+            />
+          </Link>
         )}
 
         <div className="flex gap-4 justify-center md:justify-start">
