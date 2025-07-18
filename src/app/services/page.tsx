@@ -86,8 +86,8 @@ const ServicesPage = () => {
           </Carousel>
           <div className="flex gap-8 text-center justify-center">
             <CountUp to={20} topText="Projects" bottomText="Completed" />
-            <CountUp to={500} topText="Development" bottomText="Hours" />
-            <CountUp to={500} topText="GitHub" bottomText="Contributions" />
+            <CountUp to={6} topText="Months of" bottomText="Experience" />
+            <CountUp to={600} topText="GitHub" bottomText="Contributions" />
           </div>
         </div>
         <div className="md:flex flex-col gap-4 md:w-1/2 md:items-start items-center hidden">
