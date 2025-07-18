@@ -106,7 +106,7 @@ const HomePage = () => {
           variants={fadeInRight}
         >
           CS grad who loves turning ideas into actual working stuff. From
-          Front-End magic to Back-End logic, I'm about building things that just
+          Front-End magic to Back-End logic, I&apos;m about building things that just
           work. I like keeping things secure too, no unexpected surprises on my
           watch. Big fan of Linux, scripting, and automating the boring stuff so
           I can focus on the fun parts.
