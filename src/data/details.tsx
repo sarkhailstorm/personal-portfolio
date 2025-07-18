@@ -14,10 +14,10 @@ export const details: Record<string, React.ReactNode> = {
         Web Developer Intern
       </h1>
       <p className="dark:text-white text-gray-600">
-        During my front-end internship at Apexure, I built web interfaces and
-        interactive features for client projects using modern JavaScript.
-        Learned how professional teams ship products - from code reviews to
-        building interfaces that worked well and looked great.
+        Built full-stack web applications using JavaScript, implementing
+        component-based UIs, REST APIs, authentication, and database
+        integration. Collaborated in Agile sprints with a cross-functional team,
+        contributing to development, testing, and code reviews using Git.
       </p>
     </div>
   ),
@@ -29,9 +29,9 @@ export const details: Record<string, React.ReactNode> = {
       </h1>
       <div className="flex flex-col gap-2">
         <p className="dark:text-white text-gray-600">
-          Developed multiple full-stack web apps with modern technologies like Next.js, focusing on performance and
-          UX, while contributing features and bug fixes to collaborative GitHub
-          projects.
+          Developed multiple full-stack web apps with modern technologies like
+          Next.js, focusing on performance and UX, while contributing features
+          and bug fixes to collaborative GitHub projects.
         </p>
       </div>
     </div>
@@ -46,9 +46,9 @@ export const details: Record<string, React.ReactNode> = {
       />
       <p className="text-xl font-bold dark:text-white text-gray-800">CS Grad</p>
       <p className="dark:text-white text-gray-600">
-        Graduated from Caset College of Computer Sciences with great grades.
-        Gained a solid foundation in software development, web technologies, and
-        problem-solving through hands-on projects and coursework.
+        Built a strong foundation in software development through coursework and
+        projects, covering backend systems, databases, user-friendly interfaces,
+        collaborative workflows, and industry-relevant tools and technologies.
       </p>
     </div>
   ),
