@@ -105,10 +105,11 @@ const HomePage = () => {
           className="md:w-[85%] pt-2 dark:text-gray-300 text-gray-600 w-[100%] md:text-start text-center md:px-0 px-4"
           variants={fadeInRight}
         >
-          Software Developer who&apos;s all about building cool and functional
-          software. From Front-End magic to Back-End logic, I bring ideas to
-          life with clean and efficient code. I build apps with security in mind
-          so there are no nasty surprises.
+          CS grad who loves turning ideas into actual working stuff. From
+          Front-End magic to Back-End logic, I'm about building things that just
+          work. I like keeping things secure too, no unexpected surprises on my
+          watch. Big fan of Linux, scripting, and automating the boring stuff so
+          I can focus on the fun parts.
         </motion.p>
 
         <motion.div
@@ -118,10 +119,10 @@ const HomePage = () => {
           <a
             href="/cv.pdf"
             download
-            className="group flex items-center max-w-max p-1 rounded-lg dark:bg-[#FF0000] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-3 dark:md:hover:bg-[#FF0000] hover:bg-indigo-600"
+            className="group flex items-center max-w-max p-1 rounded-lg dark:bg-[#FF0000] bg-indigo-700 md:hover:bg-indigo-700 transition-all duration-300 gap-3 md:gap-0 md:hover:gap-2 dark:md:hover:bg-[#FF0000] hover:bg-indigo-600"
           >
             {screenSize === "desktop" ? (
-              <MdOutlineReadMore className="text-4xl transition-transform duration-300" />
+              <MdOutlineReadMore className="text-4xl transition-transform duration-300 hover:rotate-90" />
             ) : (
               <HiOutlineDownload className="text-4xl py-1" />
             )}
